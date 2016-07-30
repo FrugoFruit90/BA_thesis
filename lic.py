@@ -1,22 +1,14 @@
 import csv
-import matplotlib.pyplot as plt
 import math as m
 from datetime import datetime as dt
-import requests
-from operator import truediv
-from sklearn.ensemble import RandomForestClassifier, ExtraTreesClassifier
-from sklearn.utils import shuffle
-import numpy as np
-import pandas as pd
-from operator import itemgetter
-import pickle
 import sqlite3
 import sys
+
+
 ################## PART 1: DATA PREPARATION ######################
 
-#data = csv.reader(open('/home/janek/Documents/licencjat/centyData.csv', newline='',encoding='ISO-8859-1'), delimiter=',')
+# data = csv.reader(open('/home/janek/Documents/licencjat/centyData.csv', newline='',encoding='ISO-8859-1'), delimiter=',')
 db_conn = sqlite3.connect('data.db')
-
 
 nameW = list()
 nameB = list()
@@ -33,50 +25,52 @@ names = dict()
 namesIter = 0
 _ = ''
 print('Data loading initiated')
-with open('/home/janek/Documents/licencjat/base.csv', newline='',encoding='ISO-8859-1') as csvfile:
-	data = csv.reader(csvfile, delimiter=',')
-	for row in data:
-		try: date.append(dt.strptime(row[8],'%d.%m.%Y'))
-		except: continue
-		nameW.append(row[0] + ' ' + row[1])
-		nameB.append(row[3] + ' ' + row[4])
-		whiteRank.append(int(row[2]))
-		blackRank.append(int(row[5]))
-		result.append(float(row[9]))
-		tournament_data.append(row[7].split(sep=' '))
-		# month.append(date.month)
-		# day.append(date.day)
-		# year.append(date.year)
+with open('/home/janek/Documents/licencjat/base.csv', newline='', encoding='ISO-8859-1') as csvfile:
+    data = csv.reader(csvfile, delimiter=',')
+    for row in data:
+        try:
+            date.append(dt.strptime(row[8], '%d.%m.%Y'))
+        except:
+            continue
+        nameW.append(row[0] + ' ' + row[1])
+        nameB.append(row[3] + ' ' + row[4])
+        whiteRank.append(int(row[2]))
+        blackRank.append(int(row[5]))
+        result.append(float(row[9]))
+        tournament_data.append(row[7].split(sep=' '))
+    # month.append(date.month)
+    # day.append(date.day)
+    # year.append(date.year)
 
 t_round = list()
 tournament = list()
 for x in tournament_data:
-	try:
-		t_round.append(int(m.floor(float(x[-1][1:-1]))))
-		tournament.append(' '.join(x[:-1]))
-	except:
-		t_round.append(None)
-		tournament.append(' '.join(x))
+    try:
+        t_round.append(int(m.floor(float(x[-1][1:-1]))))
+        tournament.append(' '.join(x[:-1]))
+    except:
+        t_round.append(None)
+        tournament.append(' '.join(x))
 print('All data loaded, commence feature engineering')
 
 c = db_conn.cursor()
 
 # Create table
 c.execute('''CREATE TABLE chess_data
-             (date text, nameW text, nameB text, whiteRank int, blackRank int, tournament text, t_round int, result real)''')
+             (date TEXT, nameW TEXT, nameB TEXT, whiteRank INT, blackRank INT, tournament TEXT, t_round INT, result REAL)''')
 
 # Insert a row of data
 for i, elem in enumerate(nameW):
-	try:
-		row = (date[i], nameW[i], nameB[i], whiteRank[i], blackRank[i], tournament[i], t_round[i], result[i])
-		c.execute("INSERT INTO chess_data VALUES " + row)
-		# Save (commit) the changes
-		conn.commit()
-	except: 
-		pass
+    try:
+        row = (date[i], nameW[i], nameB[i], whiteRank[i], blackRank[i], tournament[i], t_round[i], result[i])
+        c.execute("INSERT INTO chess_data VALUES " + row)
+        # Save (commit) the changes
+        db_conn.commit()
+    except:
+        pass
 # We can also close the connection if we are done with it.
 # Just be sure any changes have been committed or they will be lost.
-conn.close()
+db_conn.close()
 
 print('Done!')
 sys.exit(0)
@@ -91,16 +85,13 @@ del day
 del month
 del year
 print('discard all the shit')
-Y = [int(2*x-1) for x in result]
+Y = [int(2 * x - 1) for x in result]
 X = pd.DataFrame(X)
 Y = pd.DataFrame(Y)
 
-
-
-
 n = len(nameW)
-k1 = m.floor(0.2*n)
-k2 = m.floor(0.8*n)
+k1 = m.floor(0.2 * n)
+k2 = m.floor(0.8 * n)
 X_train = X[:k1]
 Y_train = Y[:k1]
 X_CV = X[k1:k2]
