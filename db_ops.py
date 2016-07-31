@@ -1,11 +1,11 @@
 import csv
-import sqlite3
+import psycopg2
 import sys
 from datetime import datetime as dt
-
+import math
 DEBUG = True
 TABLE_NAME = "chess_data"
-DB_CONN = sqlite3.connect('db.sqlite3')
+DB_CONN = psycopg2.connect("dbname=postgres user=postgres")
 
 
 def create_db_table(cursor, table_name):
@@ -50,8 +50,8 @@ def load_data_into_db(cursor, table_name):
 
             tournament_data = row[7].split(sep=' ')
             try:
-                t_round = int(m.floor(float(tournament_data[-1][1:-1])))
                 tournament = ' '.join(tournament_data[:-1])
+                t_round = int(math.floor(float(tournament_data[-1][1:-1])))
             except:
                 t_round = None
                 tournament = ' '.join(tournament_data)

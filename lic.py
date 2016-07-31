@@ -1,14 +1,22 @@
 import csv
 import math as m
 from datetime import datetime as dt
-import sqlite3
+import psycopg2
 import sys
 
 
-################## PART 1: DATA PREPARATION ######################
+# PART 1: DATA PREPARATION
 
-# data = csv.reader(open('/home/janek/Documents/licencjat/centyData.csv', newline='',encoding='ISO-8859-1'), delimiter=',')
-db_conn = sqlite3.connect('data.db')
+# Connect to existing database
+db_conn = psycopg2.connect("dbname=postgres user=postgres")
+
+# Open a cursor to perform database operations
+c = db_conn.cursor()
+
+# Create table
+c.execute('''CREATE TABLE chess_data
+             (id serial PRIMARY KEY, date TEXT, nameW TEXT, nameB TEXT, whiteRank INT, blackRank INT, tournament TEXT, t_round INT, result REAL);''')
+
 
 nameW = list()
 nameB = list()
@@ -20,10 +28,9 @@ date = list()
 month = list()
 day = list()
 year = list()
+t_round = list()
+tournament = list()
 
-names = dict()
-namesIter = 0
-_ = ''
 print('Data loading initiated')
 with open('/home/janek/Documents/licencjat/base.csv', newline='', encoding='ISO-8859-1') as csvfile:
     data = csv.reader(csvfile, delimiter=',')
@@ -37,27 +44,14 @@ with open('/home/janek/Documents/licencjat/base.csv', newline='', encoding='ISO-
         whiteRank.append(int(row[2]))
         blackRank.append(int(row[5]))
         result.append(float(row[9]))
-        tournament_data.append(row[7].split(sep=' '))
-    # month.append(date.month)
-    # day.append(date.day)
-    # year.append(date.year)
-
-t_round = list()
-tournament = list()
-for x in tournament_data:
-    try:
-        t_round.append(int(m.floor(float(x[-1][1:-1]))))
-        tournament.append(' '.join(x[:-1]))
-    except:
-        t_round.append(None)
-        tournament.append(' '.join(x))
+        tournament_data = row[7].split(sep=' ')
+        try:
+            t_round.append(int(m.floor(float(tournament_data[-1][1:-1]))))
+            tournament.append(' '.join(tournament_data[:-1]))
+        except:
+            t_round.append(None)
+            tournament.append(' '.join(tournament_data))
 print('All data loaded, commence feature engineering')
-
-c = db_conn.cursor()
-
-# Create table
-c.execute('''CREATE TABLE chess_data
-             (date TEXT, nameW TEXT, nameB TEXT, whiteRank INT, blackRank INT, tournament TEXT, t_round INT, result REAL)''')
 
 # Insert a row of data
 for i, elem in enumerate(nameW):
@@ -65,9 +59,9 @@ for i, elem in enumerate(nameW):
         row = (date[i], nameW[i], nameB[i], whiteRank[i], blackRank[i], tournament[i], t_round[i], result[i])
         c.execute("INSERT INTO chess_data VALUES " + row)
         # Save (commit) the changes
-        db_conn.commit()
     except:
         pass
+db_conn.commit()
 # We can also close the connection if we are done with it.
 # Just be sure any changes have been committed or they will be lost.
 db_conn.close()
