@@ -3,19 +3,21 @@ import psycopg2
 import sys
 from datetime import datetime as dt
 import math
+
 DEBUG = True
 TABLE_NAME = "chess_data"
-DB_CONN = psycopg2.connect("dbname=postgres user=postgres")
+DB_CONN = psycopg2.connect("dbname=postgres user=postgres password=admin")
 
 
 def create_db_table(cursor, table_name):
     # here table schema should be defined
     cursor.execute('''CREATE TABLE ''' + table_name + '''
-             (date TEXT, nameW TEXT, nameB TEXT, whiteRank INT, blackRank INT, tournament TEXT, t_round INT, result REAL, t_result REAL NULLABLE);''')
+             (date TEXT, nameW TEXT, nameB TEXT, whiteRank INT, blackRank INT, tournament TEXT, t_round INT, result REAL, t_result REAL);''')
 
 
 def check_if_table_exists(cursor, table_name):
-    return len(cursor.execute('''SELECT name FROM sqlite_master WHERE type='table' AND name=?;''', (table_name,)).fetchall()) > 0
+    cursor.execute("SELECT EXISTS(SELECT * FROM information_schema.tables where table_name=%s)", ('table_name',))
+    return cursor.fetchone()[0]
 
 
 def insert_into_db(cursor, data_row):
@@ -60,16 +62,15 @@ def load_data_into_db(cursor, table_name):
                       None)  # last argument is to be calculated later
             if insert_into_db(cursor, db_row):
                 i += 1
-            DB_CONN.commit()
             sys.stdout.write('\rloaded %s rows' % (i))
             sys.stdout.flush()
-
+            DB_CONN.commit()
     sys.stdout.write('\nDone loading data into DB\n')
 
 
 if __name__ == '__main__':
     c = DB_CONN.cursor()
-    if not check_if_table_exists(c, TABLE_NAME):
+    if check_if_table_exists(c, TABLE_NAME):
         create_db_table(c, TABLE_NAME)
     load_data_into_db(c, TABLE_NAME)
     DB_CONN.close()

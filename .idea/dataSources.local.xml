@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Sqlite (Xerial) - db.sqlite3" uuid="51bee3bb-479e-44b1-8a9a-877299d9baab">
+      <secret-storage>master_key</secret-storage>
+      <auth-required>false</auth-required>
+    </data-source>
+    <data-source name="PostgreSQL - postgres@localhost" uuid="1378dfe6-ddec-45db-86e8-140a57e908d7">
+      <secret-storage>master_key</secret-storage>
+      <user-name>postgres</user-name>
+      <introspection-scope>postgres:pg_catalog,postgres,public</introspection-scope>
+      <resolve-scope>postgres:postgres,public</resolve-scope>
+    </data-source>
+  </component>
+</project>

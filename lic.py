@@ -14,8 +14,8 @@ db_conn = psycopg2.connect("dbname=postgres user=postgres")
 c = db_conn.cursor()
 
 # Create table
-c.execute('''CREATE TABLE chess_data
-             (id serial PRIMARY KEY, date TEXT, nameW TEXT, nameB TEXT, whiteRank INT, blackRank INT, tournament TEXT, t_round INT, result REAL);''')
+# c.execute('''CREATE TABLE chess_data
+#              (id serial PRIMARY KEY, date TEXT, nameW TEXT, nameB TEXT, whiteRank INT, blackRank INT, tournament TEXT, t_round INT, result REAL);''')
 
 
 nameW = list()
