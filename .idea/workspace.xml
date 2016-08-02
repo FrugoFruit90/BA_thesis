@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c49628ca-21bc-429d-8899-d45985c58ada" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db_ops.py" afterPath="$PROJECT_DIR$/db_ops.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lic.py" afterPath="$PROJECT_DIR$/lic.py" />
     </list>
     <ignored path="BA_thesis.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -17,7 +17,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/BA_thesis$lic.coverage" NAME="lic Coverage Results" MODIFIED="1470077361181" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/BA_thesis$db_ops.coverage" NAME="db_ops Coverage Results" MODIFIED="1470078004413" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/BA_thesis$db_ops.coverage" NAME="db_ops Coverage Results" MODIFIED="1470083229172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -73,7 +73,7 @@
       <file leaf-file-name="lic.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lic.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="702">
+            <state relative-caret-position="0">
               <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
               <folding>
                 <marker date="1470076905960" expanded="true" signature="309:486" ph="'''...'''" />
@@ -84,32 +84,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="db_ops.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="db_ops.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db_ops.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="53" column="16" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
+            <state relative-caret-position="217">
+              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
-                <marker date="1470078217926" expanded="true" signature="555:629" ph="SELECT EXIST... " />
-                <marker date="1470078217926" expanded="true" signature="569:626" ph="SELECT * FRO... tables" />
-                <marker date="1470078217926" expanded="true" signature="754:811" ph="INSERT INTO chess_data... " />
+                <marker date="1470083472902" expanded="true" signature="571:645" ph="SELECT EXIST... " />
+                <marker date="1470083472902" expanded="true" signature="585:642" ph="SELECT * FRO... tables" />
+                <marker date="1470083472902" expanded="true" signature="750:883" ph="INSERT INTO chess_data... " />
+                <marker date="1470083472902" expanded="true" signature="977:1029" ph="ALTER TABLE chess_data... " />
+                <marker date="1470083472902" expanded="true" signature="1115:1297" ph="update chess... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/1378dfe6-ddec-45db-86e8-140a57e908d7/console.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="15" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="postgres.public.chess_data" pinned="false" current-in-tab="false">
+      <file leaf-file-name="postgres.public.chess_data" pinned="false" current-in-tab="true">
         <entry file="dbDummy://dbtable:/f11369b9/1378dfe6-ddec-45db-86e8-140a57e908d7/postgres.public.chess_data">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
@@ -118,7 +110,7 @@
           </provider>
           <provider editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="0" column="12" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -145,6 +137,7 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/51bee3bb-479e-44b1-8a9a-877299d9baab/console.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/1378dfe6-ddec-45db-86e8-140a57e908d7/console.sql" />
         <option value="$PROJECT_DIR$/lic.py" />
+        <option value="dbtable:/f11369b9/1378dfe6-ddec-45db-86e8-140a57e908d7/postgres.public.chess_data" />
         <option value="$PROJECT_DIR$/db_ops.py" />
       </list>
     </option>
@@ -188,7 +181,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -201,33 +194,10 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BA_thesis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BA_thesis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BA_thesis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ba_env/bin/python3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/db_ops.py" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQL&#10;Sqlite (Xerial)" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -507,8 +477,8 @@
     </list>
     <recent_temporary>
       <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Nosetests in BA_thesis" />
-        <item index="1" class="java.lang.String" itemvalue="Python.db_ops" />
+        <item index="0" class="java.lang.String" itemvalue="Python.db_ops" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Nosetests in BA_thesis" />
         <item index="2" class="java.lang.String" itemvalue="Python.lic" />
       </list>
     </recent_temporary>
@@ -535,9 +505,9 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16175653" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2849224" sideWeight="0.51528627" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32184547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28817204" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28713968" sideWeight="0.504169" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17787659" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28713968" sideWeight="0.495831" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -590,9 +560,11 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1470078217926" expanded="true" signature="555:629" ph="SELECT EXIST... " />
-            <marker date="1470078217926" expanded="true" signature="569:626" ph="SELECT * FRO... tables" />
-            <marker date="1470078217926" expanded="true" signature="754:811" ph="INSERT INTO chess_data... " />
+            <marker date="1470083472902" expanded="true" signature="571:645" ph="SELECT EXIST... " />
+            <marker date="1470083472902" expanded="true" signature="585:642" ph="SELECT * FRO... tables" />
+            <marker date="1470083472902" expanded="true" signature="750:883" ph="INSERT INTO chess_data... " />
+            <marker date="1470083472902" expanded="true" signature="977:1029" ph="ALTER TABLE chess_data... " />
+            <marker date="1470083472902" expanded="true" signature="1115:1297" ph="update chess... " />
           </folding>
         </state>
       </provider>
@@ -644,9 +616,11 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1470078217926" expanded="true" signature="555:629" ph="SELECT EXIST... " />
-            <marker date="1470078217926" expanded="true" signature="569:626" ph="SELECT * FRO... tables" />
-            <marker date="1470078217926" expanded="true" signature="754:811" ph="INSERT INTO chess_data... " />
+            <marker date="1470083472902" expanded="true" signature="571:645" ph="SELECT EXIST... " />
+            <marker date="1470083472902" expanded="true" signature="585:642" ph="SELECT * FRO... tables" />
+            <marker date="1470083472902" expanded="true" signature="750:883" ph="INSERT INTO chess_data... " />
+            <marker date="1470083472902" expanded="true" signature="977:1029" ph="ALTER TABLE chess_data... " />
+            <marker date="1470083472902" expanded="true" signature="1115:1297" ph="update chess... " />
           </folding>
         </state>
       </provider>
@@ -706,9 +680,11 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1470078217926" expanded="true" signature="555:629" ph="SELECT EXIST... " />
-            <marker date="1470078217926" expanded="true" signature="569:626" ph="SELECT * FRO... tables" />
-            <marker date="1470078217926" expanded="true" signature="754:811" ph="INSERT INTO chess_data... " />
+            <marker date="1470083472902" expanded="true" signature="571:645" ph="SELECT EXIST... " />
+            <marker date="1470083472902" expanded="true" signature="585:642" ph="SELECT * FRO... tables" />
+            <marker date="1470083472902" expanded="true" signature="750:883" ph="INSERT INTO chess_data... " />
+            <marker date="1470083472902" expanded="true" signature="977:1029" ph="ALTER TABLE chess_data... " />
+            <marker date="1470083472902" expanded="true" signature="1115:1297" ph="update chess... " />
           </folding>
         </state>
       </provider>
@@ -747,9 +723,11 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1470078217926" expanded="true" signature="555:629" ph="SELECT EXIST... " />
-            <marker date="1470078217926" expanded="true" signature="569:626" ph="SELECT * FRO... tables" />
-            <marker date="1470078217926" expanded="true" signature="754:811" ph="INSERT INTO chess_data... " />
+            <marker date="1470083472902" expanded="true" signature="571:645" ph="SELECT EXIST... " />
+            <marker date="1470083472902" expanded="true" signature="585:642" ph="SELECT * FRO... tables" />
+            <marker date="1470083472902" expanded="true" signature="750:883" ph="INSERT INTO chess_data... " />
+            <marker date="1470083472902" expanded="true" signature="977:1029" ph="ALTER TABLE chess_data... " />
+            <marker date="1470083472902" expanded="true" signature="1115:1297" ph="update chess... " />
           </folding>
         </state>
       </provider>
@@ -800,9 +778,11 @@
           <caret line="59" column="5" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1470078217926" expanded="true" signature="555:629" ph="SELECT EXIST... " />
-            <marker date="1470078217926" expanded="true" signature="569:626" ph="SELECT * FRO... tables" />
-            <marker date="1470078217926" expanded="true" signature="754:811" ph="INSERT INTO chess_data... " />
+            <marker date="1470083472902" expanded="true" signature="571:645" ph="SELECT EXIST... " />
+            <marker date="1470083472902" expanded="true" signature="585:642" ph="SELECT * FRO... tables" />
+            <marker date="1470083472902" expanded="true" signature="750:883" ph="INSERT INTO chess_data... " />
+            <marker date="1470083472902" expanded="true" signature="977:1029" ph="ALTER TABLE chess_data... " />
+            <marker date="1470083472902" expanded="true" signature="1115:1297" ph="update chess... " />
           </folding>
         </state>
       </provider>
@@ -833,14 +813,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/1378dfe6-ddec-45db-86e8-140a57e908d7/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -849,14 +821,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lic.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
+        <state relative-caret-position="0">
           <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
           <folding>
             <marker date="1470076905960" expanded="true" signature="309:486" ph="'''...'''" />
             <marker date="1470076905960" expanded="true" signature="312:482" ph="CREATE TABLE... chess_data" />
             <marker date="1470076905960" expanded="true" signature="1755:1785" ph="INSERT INTO chess_data... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db_ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1470083472902" expanded="true" signature="571:645" ph="SELECT EXIST... " />
+            <marker date="1470083472902" expanded="true" signature="585:642" ph="SELECT * FRO... tables" />
+            <marker date="1470083472902" expanded="true" signature="750:883" ph="INSERT INTO chess_data... " />
+            <marker date="1470083472902" expanded="true" signature="977:1029" ph="ALTER TABLE chess_data... " />
+            <marker date="1470083472902" expanded="true" signature="1115:1297" ph="update chess... " />
           </folding>
         </state>
       </provider>
@@ -869,21 +864,8 @@
       </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="12" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db_ops.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="53" column="16" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <marker date="1470078217926" expanded="true" signature="555:629" ph="SELECT EXIST... " />
-            <marker date="1470078217926" expanded="true" signature="569:626" ph="SELECT * FRO... tables" />
-            <marker date="1470078217926" expanded="true" signature="754:811" ph="INSERT INTO chess_data... " />
-          </folding>
         </state>
       </provider>
     </entry>

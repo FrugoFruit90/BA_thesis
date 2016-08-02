@@ -5,7 +5,7 @@ from datetime import datetime as dt
 import math
 
 DEBUG = True
-TABLE_NAME = "chess_data"
+TABLE_NAME = "postgres.public.chess_data"
 DB_CONN = psycopg2.connect("dbname=postgres user=postgres password=admin")
 
 
@@ -21,11 +21,22 @@ def check_if_table_exists(cursor, table_name):
 
 
 def insert_into_db(cursor, data_row):
-    try:
-        cursor.execute("INSERT INTO chess_data VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", data_row)
-        return True
-    except Exception:
-        return False
+    query = "INSERT INTO chess_data(date, namew, nameb, whiterank, blackrank, tournament, t_round, result) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)"
+    cursor.execute(query, data_row)
+    return True
+
+
+def add_columns(cursor):
+    query = "ALTER TABLE chess_data ADD COLUMN result_in_t_W real"
+    cursor.execute(query)
+    return True
+
+
+def fill_col_data(cursor):
+    query = "update chess_data t1 set result_in_T_W = (select sum(result) from chess_data t2 " \
+            "where (t1.nameW = t2.nameW or t1.nameW = t2.nameB) and t1.tournament = t2.tournament)"
+    cursor.execute(query)
+    return True
 
 
 def load_data_into_db(cursor, table_name):
@@ -58,13 +69,13 @@ def load_data_into_db(cursor, table_name):
                 t_round = None
                 tournament = ' '.join(tournament_data)
 
-            db_row = (date, nameW, nameB, whiteRank, blackRank, tournament, t_round, result,
-                      None)  # last argument is to be calculated later
+            db_row = (date, nameW, nameB, whiteRank, blackRank, tournament, t_round, result)
+            # last argument is to be calculated later
             if insert_into_db(cursor, db_row):
                 i += 1
-            sys.stdout.write('\rloaded %s rows' % (i))
-            sys.stdout.flush()
-            DB_CONN.commit()
+        sys.stdout.write('\rloaded %s rows' % (i))
+        sys.stdout.flush()
+        DB_CONN.commit()
     sys.stdout.write('\nDone loading data into DB\n')
 
 
@@ -72,7 +83,10 @@ if __name__ == '__main__':
     c = DB_CONN.cursor()
     if check_if_table_exists(c, TABLE_NAME):
         create_db_table(c, TABLE_NAME)
-    load_data_into_db(c, TABLE_NAME)
+    # load_data_into_db(c, TABLE_NAME)
+    #add_columns(c)
+    fill_col_data(c)
+    DB_CONN.commit()
     DB_CONN.close()
     print('Done!')
     sys.exit(0)
