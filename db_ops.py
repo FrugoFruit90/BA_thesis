@@ -3,8 +3,11 @@ import psycopg2
 import sys
 from datetime import datetime as dt
 import math
+import pandas
+import pickle
+import sqlalchemy
 
-DEBUG = True
+DEBUG = False
 TABLE_NAME = "postgres.public.chess_data"
 DB_CONN = psycopg2.connect("dbname=postgres user=postgres password=admin")
 
@@ -12,7 +15,7 @@ DB_CONN = psycopg2.connect("dbname=postgres user=postgres password=admin")
 def create_db_table(cursor, table_name):
     # here table schema should be defined
     cursor.execute('''CREATE TABLE ''' + table_name + '''
-             (date TEXT, nameW TEXT, nameB TEXT, whiteRank INT, blackRank INT, tournament TEXT, t_round INT, result REAL, t_result REAL);''')
+             (date TEXT, nameW TEXT, nameB TEXT, whiteRank INT, blackRank INT, tournament TEXT, t_round INT, result REAL);''')
 
 
 def check_if_table_exists(cursor, table_name):
@@ -26,15 +29,15 @@ def insert_into_db(cursor, data_row):
     return True
 
 
-def add_columns(cursor):
-    query = "ALTER TABLE chess_data ADD COLUMN result_in_t_W real"
+def add_column(cursor):
+    query = "ALTER TABLE chess_data ADD COLUMN career_games_b REAL "
     cursor.execute(query)
     return True
 
 
 def fill_col_data(cursor):
-    query = "update chess_data t1 set result_in_T_W = (select sum(result) from chess_data t2 " \
-            "where (t1.nameW = t2.nameW or t1.nameW = t2.nameB) and t1.tournament = t2.tournament)"
+    query = "update chess_data t1 set career_games_b = (select coalesce(count(nameW), 0) from chess_data t2 " \
+            "where (t1.nameB = t2.nameW or t1.nameB = t2.nameB) and t1.date > t2.date)"
     cursor.execute(query)
     return True
 
@@ -81,12 +84,71 @@ def load_data_into_db(cursor, table_name):
 
 if __name__ == '__main__':
     c = DB_CONN.cursor()
-    if check_if_table_exists(c, TABLE_NAME):
-        create_db_table(c, TABLE_NAME)
+    # create_db_table(c, TABLE_NAME)
     # load_data_into_db(c, TABLE_NAME)
-    #add_columns(c)
-    fill_col_data(c)
-    DB_CONN.commit()
+    # add_column(c)
+    # fill_col_data(c)
+    # queries = [
+    #     "ALTER TABLE chess_data ALTER COLUMN date TYPE DATE using to_date(date, 'YYYY-MM-DD')",
+    #     "ALTER TABLE chess_data ADD COLUMN result_in_t_w real",
+    #     "update chess_data t1 set result_in_t_w = (select coalesce(SUM(CASE WHEN t1.nameW = t2.nameW THEN result ELSE 1-result END),0) from chess_data t2 " \
+    #     "where (t1.nameW = t2.nameW or t1.nameW = t2.nameB) and t1.tournament = t2.tournament and t1.date > t2.date)",
+    #     "ALTER TABLE chess_data ADD COLUMN result_in_t_b real",
+    #     "update chess_data t1 set result_in_t_b = (select coalesce(SUM(CASE WHEN t1.nameB = t2.nameW THEN result ELSE 1-result END), 0) from chess_data t2 " \
+    #     "where (t1.nameB = t2.nameW or t1.nameB = t2.nameB) and t1.tournament = t2.tournament and t1.date > t2.date)",
+    #     "ALTER TABLE chess_data ADD COLUMN games_in_t_w real",
+    #     "update chess_data t1 set games_in_t_w = (select coalesce(count(nameW),0) from chess_data t2 " \
+    #     "where (t1.nameW = t2.nameW or t1.nameW = t2.nameB) and t1.tournament = t2.tournament and t1.date > t2.date)",
+    #     "ALTER TABLE chess_data ADD COLUMN games_in_t_b real",
+    #     "update chess_data t1 set games_in_t_b = (select coalesce(count(nameB),0) from chess_data t2 " \
+    #     "where (t1.nameB = t2.nameW or t1.nameB = t2.nameB) and t1.tournament = t2.tournament and t1.date > t2.date)",
+    #     "ALTER TABLE chess_data ADD COLUMN career_games_w int",
+    #     "update chess_data t1 set career_games_w = (select coalesce(count(nameW),0) from chess_data t2 " \
+    #     "where (t1.nameW = t2.nameW or t1.nameW = t2.nameB) and t1.date > t2.date)",
+    #     "ALTER TABLE chess_data ADD COLUMN career_games_b int",
+    #     "update chess_data t1 set career_games_b = (select coalesce(count(nameW), 0) from chess_data t2 " \
+    #     "where (t1.nameB = t2.nameW or t1.nameB = t2.nameB) and t1.date > t2.date)",
+    #     "ALTER TABLE chess_data ADD COLUMN career_w_record real",
+    #     "update chess_data t1 set career_w_record = (select coalesce(SUM(CASE WHEN t1.nameW = t2.nameW THEN result ELSE 1-result END), 0) from chess_data t2 " \
+    #     "where (t1.nameW = t2.nameW or t1.nameW = t2.nameB) and t1.date > t2.date)",
+    #     "ALTER TABLE chess_data ADD COLUMN career_b_record real",
+    #     "update chess_data t1 set career_b_record = (select coalesce(SUM(CASE WHEN t1.nameB = t2.nameW THEN result ELSE 1-result END), 0) from chess_data t2 " \
+    #     "where (t1.nameB = t2.nameW or t1.nameB = t2.nameB) and t1.date > t2.date)",
+    #     "ALTER TABLE chess_data ADD COLUMN last_q_record_w real",
+    #     "update chess_data t1 set last_q_record_w = (select coalesce(SUM(CASE WHEN t1.nameW = t2.nameW THEN result ELSE 1-result END), 0) from chess_data t2 " \
+    #     "where (t1.nameW = t2.nameW or t1.nameW = t2.nameB) and t1.date - t2.date<90 and t1.date - t2.date>0)",
+    #     "ALTER TABLE chess_data ADD COLUMN last_q_games_w int",
+    #     "update chess_data t1 set last_q_games_w = (select coalesce(count(nameW),0) from chess_data t2 " \
+    #     "where (t1.nameW = t2.nameW or t1.nameW = t2.nameB) and t1.date - t2.date<90 and t1.date - t2.date>0)",
+    #     "ALTER TABLE chess_data ADD COLUMN last_q_record_b real",
+    #     "update chess_data t1 set last_q_record_b = (select coalesce(SUM(CASE WHEN t1.nameB = t2.nameW THEN result ELSE 1-result END), 0) from chess_data t2 " \
+    #     "where (t1.nameB = t2.nameW or t1.nameB = t2.nameB) and t1.date - t2.date<90 and t1.date - t2.date>0)",
+    #     "ALTER TABLE chess_data ADD COLUMN last_q_games_b int",
+    #     "update chess_data t1 set last_q_games_b = (select coalesce(count(nameW),0) from chess_data t2 " \
+    #     "where (t1.nameB = t2.nameW or t1.nameB = t2.nameB) and t1.date - t2.date<90 and t1.date - t2.date>0)",
+    #     "ALTER TABLE chess_data ADD COLUMN last_game_result_w real",
+    #     "update chess_data t1 set last_game_result_w = (select coalesce(CASE WHEN t1.nameW = t2.nameW THEN t2.result ELSE t2.result END,0) from chess_data t2 " \
+    #     " WHERE t2.date = (select max(date) from chess_data t3 where t3.date < t1.date AND" \
+    #     " (t1.nameW = t3.nameW or t1.nameW = t3.nameB)) AND (t1.nameW = t2.nameW OR t1.nameW = t2.nameB) Limit 1)",
+    #     "update chess_data t1 set last_game_result_w = (SELECT coalesce(last_game_result_w, 0))",
+    #     "ALTER TABLE chess_data ADD COLUMN last_game_result_b real",
+    #     "update chess_data t1 set last_game_result_b = (select coalesce(CASE WHEN t1.nameB = t2.nameW THEN t2.result ELSE t2.result END,0) from chess_data t2 " \
+    #     " WHERE t2.date = (select max(date) from chess_data t3 where t3.date < t1.date AND" \
+    #     " (t1.nameB = t3.nameW or t1.nameB = t3.nameB)) AND (t1.nameB = t2.nameW OR t1.nameB = t2.nameB) Limit 1)",
+    #     "update chess_data t1 set last_game_result_b = (SELECT coalesce(last_game_result_b, 0))",
+    # ]
+    # a = 0
+    # for query in queries:
+    #     c.execute(query)
+    #     a += 1
+    #     print("Completed query number", a)
+    #     DB_CONN.commit()
+    # print('Done feature engineering!')
+    # engine = create_engine('postgresql+psycopg2://scott:tiger@localhost/mydatabase')
+    engine = sqlalchemy.create_engine("postgresql+psycopg2://postgres:postgres@localhost:5432/postgres")
+    X = pandas.read_sql_table('chess_data', engine)
     DB_CONN.close()
-    print('Done!')
+    with open('df_X', 'wb') as f:
+        pickle.dump(X, f, pickle.HIGHEST_PROTOCOL)
+    print("Data dumped!")
     sys.exit(0)
