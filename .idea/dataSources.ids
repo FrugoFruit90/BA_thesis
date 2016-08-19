@@ -22,8 +22,8 @@
       <schema id="2" parent="1" name="public">
         <object-id>2200</object-id>
         <visible>1</visible>
-        <introspection-state-number>915</introspection-state-number>
-        <introspection-timestamp>2016-08-18.17:52:18.321</introspection-timestamp>
+        <introspection-state-number>926</introspection-state-number>
+        <introspection-timestamp>2016-08-19.23:33:04.452</introspection-timestamp>
       </schema>
       <schema id="3" parent="1" name="pg_catalog">
         <object-id>11</object-id>
@@ -36,7 +36,7 @@
       <schema id="5" parent="1" name="pg_temp_1">
         <object-id>11320</object-id>
         <visible>1</visible>
-        <introspection-timestamp>2016-08-18.17:52:18.321</introspection-timestamp>
+        <introspection-timestamp>2016-08-19.23:33:04.452</introspection-timestamp>
       </schema>
       <schema id="6" parent="1" name="pg_toast_temp_1">
         <object-id>11321</object-id>
@@ -48,38 +48,98 @@
         <object-id>16651</object-id>
         <state-number>912</state-number>
       </table>
-      <column id="9" parent="8" name="date">
+      <table id="9" parent="2" name="chess_data2">
+        <object-id>16681</object-id>
+        <state-number>916</state-number>
+      </table>
+      <column id="10" parent="8" name="date">
         <state-number>911</state-number>
         <data-type>date|0</data-type>
       </column>
-      <column id="10" parent="8" name="namew">
+      <column id="11" parent="8" name="namew">
         <state-number>907</state-number>
         <data-type>text|0</data-type>
       </column>
-      <column id="11" parent="8" name="nameb">
+      <column id="12" parent="8" name="nameb">
         <state-number>907</state-number>
         <data-type>text|0</data-type>
       </column>
-      <column id="12" parent="8" name="whiterank">
+      <column id="13" parent="8" name="whiterank">
         <state-number>907</state-number>
         <data-type>integer|0</data-type>
       </column>
-      <column id="13" parent="8" name="blackrank">
+      <column id="14" parent="8" name="blackrank">
         <state-number>907</state-number>
         <data-type>integer|0</data-type>
       </column>
-      <column id="14" parent="8" name="tournament">
+      <column id="15" parent="8" name="tournament">
         <state-number>907</state-number>
         <data-type>text|0</data-type>
       </column>
-      <column id="15" parent="8" name="t_round">
+      <column id="16" parent="8" name="t_round">
         <state-number>907</state-number>
         <data-type>integer|0</data-type>
       </column>
-      <column id="16" parent="8" name="result">
+      <column id="17" parent="8" name="result">
         <state-number>907</state-number>
         <data-type>real|0</data-type>
       </column>
+      <column id="18" parent="9" name="date">
+        <state-number>916</state-number>
+        <data-type>date|0</data-type>
+      </column>
+      <column id="19" parent="9" name="namew">
+        <state-number>916</state-number>
+        <data-type>text|0</data-type>
+      </column>
+      <column id="20" parent="9" name="nameb">
+        <state-number>916</state-number>
+        <data-type>text|0</data-type>
+      </column>
+      <column id="21" parent="9" name="whiterank">
+        <state-number>916</state-number>
+        <data-type>integer|0</data-type>
+      </column>
+      <column id="22" parent="9" name="blackrank">
+        <state-number>916</state-number>
+        <data-type>integer|0</data-type>
+      </column>
+      <column id="23" parent="9" name="tournament">
+        <state-number>916</state-number>
+        <data-type>text|0</data-type>
+      </column>
+      <column id="24" parent="9" name="t_round">
+        <state-number>916</state-number>
+        <data-type>integer|0</data-type>
+      </column>
+      <column id="25" parent="9" name="result">
+        <state-number>916</state-number>
+        <data-type>real|0</data-type>
+      </column>
+      <column id="26" parent="9" name="id">
+        <state-number>926</state-number>
+        <mandatory>1</mandatory>
+        <data-type>bigint|0</data-type>
+      </column>
+      <index id="27" parent="9" name="chess_data2_pkey">
+        <object-id>16704</object-id>
+        <columns>id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="28" parent="9" name="game_index">
+        <object-id>16703</object-id>
+        <columns>namew
+tournament
+date</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="29" parent="9" name="chess_data2_pkey">
+        <object-id>16705</object-id>
+        <columns>id</columns>
+        <underlying-index>chess_data2_pkey</underlying-index>
+        <primary>1</primary>
+      </key>
     </database-model>
   </data-source>
 </component>

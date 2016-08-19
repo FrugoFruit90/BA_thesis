@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c49628ca-21bc-429d-8899-d45985c58ada" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/charts.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ba_env/pip-selfcheck.json" afterPath="$PROJECT_DIR$/ba_env/pip-selfcheck.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db_ops.py" afterPath="$PROJECT_DIR$/db_ops.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lic.py" afterPath="$PROJECT_DIR$/lic.py" />
     </list>
     <ignored path="BA_thesis.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -21,7 +20,8 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/BA_thesis$lic.coverage" NAME="lic Coverage Results" MODIFIED="1471535607740" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/BA_thesis$db_ops.coverage" NAME="db_ops Coverage Results" MODIFIED="1471535575113" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/BA_thesis$charts.coverage" NAME="charts Coverage Results" MODIFIED="1471605493823" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/BA_thesis$db_ops.coverage" NAME="db_ops Coverage Results" MODIFIED="1471642839882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -63,7 +63,21 @@
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
       <PATH_ELEMENT>
-        <option name="myItemId" value="chess_data" />
+        <option name="myItemId" value="chess_data2" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="PostgreSQL - postgres@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="public" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
@@ -74,82 +88,92 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="lic.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="lic.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lic.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="451">
-              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#16#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="18">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="db_ops.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="charts.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/charts.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="db_ops.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db_ops.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="802">
-              <caret line="151" column="44" selection-start-line="151" selection-start-column="44" selection-end-line="151" selection-end-column="44" />
+            <state relative-caret-position="387">
+              <caret line="143" column="81" selection-start-line="143" selection-start-column="81" selection-end-line="143" selection-end-column="81" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
-                <marker date="1471535575059" expanded="true" signature="603:677" ph="SELECT EXIST... " />
-                <marker date="1471535575059" expanded="true" signature="617:674" ph="SELECT * FRO... tables" />
-                <marker date="1471535575059" expanded="true" signature="782:915" ph="INSERT INTO chess_data... " />
-                <marker date="1471535575059" expanded="true" signature="1008:1061" ph="ALTER TABLE chess_data... " />
-                <marker date="1471535575059" expanded="true" signature="1148:1333" ph="update chess... " />
-                <marker date="1471535575059" expanded="true" signature="3005:3089" ph="ALTER TABLE chess_data... " />
-                <marker date="1471535575059" expanded="true" signature="3103:3155" ph="ALTER TABLE chess_data... " />
-                <marker date="1471535575059" expanded="true" signature="3169:3436" ph="update chess... " />
-                <marker date="1471535575059" expanded="true" signature="3450:3502" ph="ALTER TABLE chess_data... " />
-                <marker date="1471535575059" expanded="true" signature="3516:3784" ph="update chess... " />
-                <marker date="1471535575059" expanded="true" signature="3798:3849" ph="ALTER TABLE chess_data... " />
-                <marker date="1471535575059" expanded="true" signature="3863:4077" ph="update chess... " />
-                <marker date="1471535575059" expanded="true" signature="4091:4142" ph="ALTER TABLE chess_data... " />
-                <marker date="1471535575059" expanded="true" signature="4156:4370" ph="update chess... " />
-                <marker date="1471535575059" expanded="true" signature="4384:4436" ph="ALTER TABLE chess_data... " />
-                <marker date="1471535575059" expanded="true" signature="4450:4632" ph="update chess... " />
-                <marker date="1471535575059" expanded="true" signature="4646:4698" ph="ALTER TABLE chess_data... " />
-                <marker date="1471535575059" expanded="true" signature="4712:4895" ph="update chess... " />
-                <marker date="1471535575059" expanded="true" signature="4909:4963" ph="ALTER TABLE chess_data... " />
-                <marker date="1471535575059" expanded="true" signature="4977:5213" ph="update chess... " />
-                <marker date="1471535575059" expanded="true" signature="5227:5281" ph="ALTER TABLE chess_data... " />
-                <marker date="1471535575059" expanded="true" signature="5295:5531" ph="update chess... " />
-                <marker date="1471535575059" expanded="true" signature="5545:5599" ph="ALTER TABLE chess_data... " />
-                <marker date="1471535575059" expanded="true" signature="5613:5876" ph="update chess... " />
-                <marker date="1471535575059" expanded="true" signature="5890:5942" ph="ALTER TABLE chess_data... " />
-                <marker date="1471535575059" expanded="true" signature="5956:6165" ph="update chess... " />
-                <marker date="1471535575059" expanded="true" signature="6179:6233" ph="ALTER TABLE chess_data... " />
-                <marker date="1471535575059" expanded="true" signature="6247:6510" ph="update chess... " />
-                <marker date="1471535575059" expanded="true" signature="6524:6576" ph="ALTER TABLE chess_data... " />
-                <marker date="1471535575059" expanded="true" signature="6590:6799" ph="update chess... " />
-                <marker date="1471535575059" expanded="true" signature="6813:6870" ph="ALTER TABLE chess_data... " />
-                <marker date="1471535575059" expanded="true" signature="6884:7248" ph="update chess... " />
-                <marker date="1471535575059" expanded="true" signature="7262:7348" ph="update chess... " />
-                <marker date="1471535575059" expanded="true" signature="7362:7419" ph="ALTER TABLE chess_data... " />
-                <marker date="1471535575059" expanded="true" signature="7433:7797" ph="update chess... " />
-                <marker date="1471535575059" expanded="true" signature="7811:7897" ph="update chess... " />
+                <marker date="1471642838460" expanded="true" signature="615:689" ph="SELECT EXIST... " />
+                <marker date="1471642838460" expanded="true" signature="629:686" ph="SELECT * FRO... tables" />
+                <marker date="1471642838460" expanded="true" signature="794:927" ph="INSERT INTO chess_data... " />
+                <marker date="1471642838460" expanded="true" signature="1020:1073" ph="ALTER TABLE chess_data... " />
+                <marker date="1471642838460" expanded="true" signature="1160:1345" ph="update chess... " />
+                <marker date="1471642838460" expanded="true" signature="3017:3101" ph="ALTER TABLE chess_data... " />
+                <marker date="1471642838460" expanded="true" signature="3115:3167" ph="ALTER TABLE chess_data... " />
+                <marker date="1471642838460" expanded="true" signature="3462:3514" ph="ALTER TABLE chess_data... " />
+                <marker date="1471642838460" expanded="true" signature="3528:3796" ph="update chess... " />
+                <marker date="1471642838460" expanded="true" signature="3810:3861" ph="ALTER TABLE chess_data... " />
+                <marker date="1471642838460" expanded="true" signature="3875:4089" ph="update chess... " />
+                <marker date="1471642838460" expanded="true" signature="4103:4154" ph="ALTER TABLE chess_data... " />
+                <marker date="1471642838460" expanded="true" signature="4168:4382" ph="update chess... " />
+                <marker date="1471642838460" expanded="true" signature="4396:4448" ph="ALTER TABLE chess_data... " />
+                <marker date="1471642838460" expanded="true" signature="4462:4644" ph="update chess... " />
+                <marker date="1471642838460" expanded="true" signature="4658:4710" ph="ALTER TABLE chess_data... " />
+                <marker date="1471642838460" expanded="true" signature="4724:4907" ph="update chess... " />
+                <marker date="1471642838460" expanded="true" signature="4921:4975" ph="ALTER TABLE chess_data... " />
+                <marker date="1471642838460" expanded="true" signature="4989:5225" ph="update chess... " />
+                <marker date="1471642838460" expanded="true" signature="5239:5293" ph="ALTER TABLE chess_data... " />
+                <marker date="1471642838460" expanded="true" signature="5307:5543" ph="update chess... " />
+                <marker date="1471642838460" expanded="true" signature="5557:5611" ph="ALTER TABLE chess_data... " />
+                <marker date="1471642838460" expanded="true" signature="5625:5888" ph="update chess... " />
+                <marker date="1471642838460" expanded="true" signature="5902:5954" ph="ALTER TABLE chess_data... " />
+                <marker date="1471642838460" expanded="true" signature="5968:6177" ph="update chess... " />
+                <marker date="1471642838460" expanded="true" signature="6191:6245" ph="ALTER TABLE chess_data... " />
+                <marker date="1471642838460" expanded="true" signature="6259:6522" ph="update chess... " />
+                <marker date="1471642838460" expanded="true" signature="6536:6588" ph="ALTER TABLE chess_data... " />
+                <marker date="1471642838460" expanded="true" signature="6602:6811" ph="update chess... " />
+                <marker date="1471642838460" expanded="true" signature="6825:6882" ph="ALTER TABLE chess_data... " />
+                <marker date="1471642838460" expanded="true" signature="6896:7260" ph="update chess... " />
+                <marker date="1471642838460" expanded="true" signature="7274:7360" ph="update chess... " />
+                <marker date="1471642838460" expanded="true" signature="7374:7431" ph="ALTER TABLE chess_data... " />
+                <marker date="1471642838460" expanded="true" signature="7445:7809" ph="update chess... " />
+                <marker date="1471642838460" expanded="true" signature="7823:7909" ph="update chess... " />
+                <marker date="1471642838460" expanded="true" signature="7959:8147" ph="select coale... chess_data2" />
+                <marker date="1471642838460" expanded="true" signature="7959:8150" ph="select (sele... chess_data2" />
+                <marker date="1471642838460" expanded="true" signature="7967:8119" ph="select coale... chess_data2" />
+                <marker date="1471642838460" expanded="true" signature="8166:8319" ph="SELECT sum(r... chess_data2" />
+                <marker date="1471642838460" expanded="true" signature="8172:8319" ph="select sum(r... chess_data2" />
+                <marker date="1471642838460" expanded="true" signature="8228:8318" ph="SELECT t2.id... chess_data2" />
+                <marker date="1471642838460" expanded="true" signature="8415:8459" ph="ALTER TABLE chess_data2... " />
+                <marker date="1471642838460" expanded="true" signature="8475:8586" ph="SELECT * int... chess_data2" />
+                <marker date="1471642838460" expanded="true" signature="8602:8655" ph="ALTER TABLE chess_data2... " />
+                <marker date="1471642838460" expanded="true" signature="8671:8943" ph="update chess... " />
+                <marker date="1471642838460" expanded="true" signature="8960:8994" ph="UPDATE chess... " />
+                <marker date="1471642838460" expanded="true" signature="9011:9118" ph="CREATE TABLE... chess_data2" />
+                <marker date="1471642838460" expanded="true" signature="9224:9330" ph="Select .*, c... " />
+                <marker date="1471642838460" expanded="true" signature="9224:9507" ph="Select .*, (... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="postgres.public.chess_data" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/f11369b9/1378dfe6-ddec-45db-86e8-140a57e908d7/postgres.public.chess_data">
+      <file leaf-file-name="postgres.public.temp" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/f11369b9/1378dfe6-ddec-45db-86e8-140a57e908d7/postgres.public.temp">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
-              <filtering enabled="true">
-                <filter text="namew like &quot;Benko Pal%&quot;" />
-                <filter text="t.nameb  LIKE  &quot;%a&quot;" />
-                <filter text="t.nameb  LIKE  &quot;%&quot;" />
-                <filter text="t.nameb  LIKE 'benko pal'" />
-                <filter text="t.nameb  LIKE 'Benko Pal'" />
-                <filter text="whiterank&gt;2500" />
-                <filter text="whiterank&gt;0" />
-                <filter text="namew" />
-                <filter text="namew==&quot;Vila Florian&quot;" />
-                <filter text="namew=&quot;Vila Florian&quot;" />
-              </filtering>
+              <filtering enabled="true" />
               <column-attributes>
                 <column name="ctid" enabled="false" />
               </column-attributes>
@@ -163,7 +187,29 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="postgres.public.chess_data2" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/f11369b9/1378dfe6-ddec-45db-86e8-140a57e908d7/postgres.public.chess_data2">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -174,8 +220,9 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/51bee3bb-479e-44b1-8a9a-877299d9baab/console.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/1378dfe6-ddec-45db-86e8-140a57e908d7/console.sql" />
         <option value="dbtable:/f11369b9/1378dfe6-ddec-45db-86e8-140a57e908d7/postgres.public.chess_data" />
-        <option value="$PROJECT_DIR$/db_ops.py" />
         <option value="$PROJECT_DIR$/lic.py" />
+        <option value="$PROJECT_DIR$/charts.py" />
+        <option value="$PROJECT_DIR$/db_ops.py" />
       </list>
     </option>
   </component>
@@ -186,10 +233,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="88" />
-    <option name="y" value="30" />
-    <option name="width" value="1845" />
-    <option name="height" value="1028" />
+    <option name="x" value="65" />
+    <option name="y" value="-4" />
+    <option name="width" value="1855" />
+    <option name="height" value="1084" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -232,8 +279,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -254,6 +299,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -263,7 +310,29 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Python.lic">
+  <component name="RunManager" selected="Python.db_ops">
+    <configuration default="false" name="Nosetests in BA_thesis" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="BA_thesis" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="$PROJECT_DIR$" />
+      <option name="TEST_TYPE" value="TEST_FOLDER" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
     <configuration default="false" name="db_ops" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -300,10 +369,12 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="Nosetests in BA_thesis" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="charts" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -311,15 +382,9 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="BA_thesis" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="$PROJECT_DIR$" />
-      <option name="TEST_TYPE" value="TEST_FOLDER" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/charts.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
@@ -530,15 +595,17 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="Python.db_ops" />
-      <item index="1" class="java.lang.String" itemvalue="Python.lic" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Nosetests in BA_thesis" />
+    <list size="4">
+      <item index="0" class="java.lang.String" itemvalue="Python tests.Nosetests in BA_thesis" />
+      <item index="1" class="java.lang.String" itemvalue="Python.db_ops" />
+      <item index="2" class="java.lang.String" itemvalue="Python.lic" />
+      <item index="3" class="java.lang.String" itemvalue="Python.charts" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Python.lic" />
-        <item index="1" class="java.lang.String" itemvalue="Python.db_ops" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="Python.db_ops" />
+        <item index="1" class="java.lang.String" itemvalue="Python.charts" />
+        <item index="2" class="java.lang.String" itemvalue="Python.lic" />
       </list>
     </recent_temporary>
   </component>
@@ -558,26 +625,35 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="88" y="30" width="1845" height="1028" extended-state="0" />
-    <editor active="false" />
+    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.076709285" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20731707" sideWeight="0.51528627" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16342412" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20731707" sideWeight="0.48471373" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.025428414" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17745303" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2580645" sideWeight="0.549194" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25041458" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18162839" sideWeight="0.450806" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33813748" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33716077" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3991131" sideWeight="0.48471373" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -604,6 +680,24 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.48471373" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
       <collection />
@@ -622,315 +716,61 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db_ops.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2124">
-          <caret line="125" column="63" selection-start-line="125" selection-start-column="63" selection-end-line="125" selection-end-column="63" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <marker date="1471535575059" expanded="true" signature="603:677" ph="SELECT EXIST... " />
-            <marker date="1471535575059" expanded="true" signature="617:674" ph="SELECT * FRO... tables" />
-            <marker date="1471535575059" expanded="true" signature="782:915" ph="INSERT INTO chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="1008:1061" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="1148:1333" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="3005:3089" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3103:3155" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3169:3436" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="3450:3502" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3516:3784" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="3798:3849" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3863:4077" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4091:4142" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4156:4370" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4384:4436" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4450:4632" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4646:4698" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4712:4895" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4909:4963" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4977:5213" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="5227:5281" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="5295:5531" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="5545:5599" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="5613:5876" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="5890:5942" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="5956:6165" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="6179:6233" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="6247:6510" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="6524:6576" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="6590:6799" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="6813:6870" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="6884:7248" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="7262:7348" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="7362:7419" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="7433:7797" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="7811:7897" ph="update chess... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db_ops.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <marker date="1471535575059" expanded="true" signature="603:677" ph="SELECT EXIST... " />
-            <marker date="1471535575059" expanded="true" signature="617:674" ph="SELECT * FRO... tables" />
-            <marker date="1471535575059" expanded="true" signature="782:915" ph="INSERT INTO chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="1008:1061" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="1148:1333" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="3005:3089" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3103:3155" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3169:3436" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="3450:3502" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3516:3784" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="3798:3849" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3863:4077" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4091:4142" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4156:4370" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4384:4436" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4450:4632" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4646:4698" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4712:4895" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4909:4963" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4977:5213" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="5227:5281" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="5295:5531" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="5545:5599" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="5613:5876" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="5890:5942" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="5956:6165" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="6179:6233" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="6247:6510" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="6524:6576" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="6590:6799" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="6813:6870" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="6884:7248" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="7262:7348" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="7362:7419" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="7433:7797" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="7811:7897" ph="update chess... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db_ops.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="29" column="59" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="59" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <marker date="1471535575059" expanded="true" signature="603:677" ph="SELECT EXIST... " />
-            <marker date="1471535575059" expanded="true" signature="617:674" ph="SELECT * FRO... tables" />
-            <marker date="1471535575059" expanded="true" signature="782:915" ph="INSERT INTO chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="1008:1061" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="1148:1333" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="3005:3089" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3103:3155" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3169:3436" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="3450:3502" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3516:3784" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="3798:3849" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3863:4077" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4091:4142" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4156:4370" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4384:4436" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4450:4632" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4646:4698" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4712:4895" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4909:4963" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4977:5213" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="5227:5281" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="5295:5531" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="5545:5599" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="5613:5876" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="5890:5942" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="5956:6165" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="6179:6233" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="6247:6510" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="6524:6576" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="6590:6799" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="6813:6870" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="6884:7248" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="7262:7348" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="7362:7419" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="7433:7797" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="7811:7897" ph="update chess... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="774">
-          <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db_ops.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <marker date="1471535575059" expanded="true" signature="603:677" ph="SELECT EXIST... " />
-            <marker date="1471535575059" expanded="true" signature="617:674" ph="SELECT * FRO... tables" />
-            <marker date="1471535575059" expanded="true" signature="782:915" ph="INSERT INTO chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="1008:1061" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="1148:1333" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="3005:3089" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3103:3155" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3169:3436" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="3450:3502" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3516:3784" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="3798:3849" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3863:4077" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4091:4142" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4156:4370" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4384:4436" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4450:4632" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4646:4698" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4712:4895" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4909:4963" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4977:5213" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="5227:5281" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="5295:5531" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="5545:5599" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="5613:5876" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="5890:5942" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="5956:6165" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="6179:6233" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="6247:6510" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="6524:6576" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="6590:6799" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="6813:6870" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="6884:7248" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="7262:7348" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="7362:7419" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="7433:7797" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="7811:7897" ph="update chess... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/f11369b9/1378dfe6-ddec-45db-86e8-140a57e908d7/postgres.public.chess_data">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db_ops.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
           <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1471535575059" expanded="true" signature="603:677" ph="SELECT EXIST... " />
-            <marker date="1471535575059" expanded="true" signature="617:674" ph="SELECT * FRO... tables" />
-            <marker date="1471535575059" expanded="true" signature="782:915" ph="INSERT INTO chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="1008:1061" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="1148:1333" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="3005:3089" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3103:3155" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3169:3436" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="3450:3502" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3516:3784" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="3798:3849" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3863:4077" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4091:4142" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4156:4370" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4384:4436" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4450:4632" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4646:4698" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4712:4895" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4909:4963" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4977:5213" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="5227:5281" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="5295:5531" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="5545:5599" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="5613:5876" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="5890:5942" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="5956:6165" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="6179:6233" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="6247:6510" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="6524:6576" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="6590:6799" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="6813:6870" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="6884:7248" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="7262:7348" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="7362:7419" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="7433:7797" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="7811:7897" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="615:689" ph="SELECT EXIST... " />
+            <marker date="1471642838460" expanded="true" signature="629:686" ph="SELECT * FRO... tables" />
+            <marker date="1471642838460" expanded="true" signature="794:927" ph="INSERT INTO chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="1020:1073" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="1160:1345" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="3017:3101" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="3115:3167" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="3462:3514" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="3528:3796" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="3810:3861" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="3875:4089" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="4103:4154" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="4168:4382" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="4396:4448" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="4462:4644" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="4658:4710" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="4724:4907" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="4921:4975" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="4989:5225" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="5239:5293" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="5307:5543" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="5557:5611" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="5625:5888" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="5902:5954" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="5968:6177" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="6191:6245" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="6259:6522" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="6536:6588" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="6602:6811" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="6825:6882" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="6896:7260" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="7274:7360" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="7374:7431" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="7445:7809" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="7823:7909" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="7959:8147" ph="select coale... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="7959:8150" ph="select (sele... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="7967:8119" ph="select coale... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="8166:8319" ph="SELECT sum(r... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="8172:8319" ph="select sum(r... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="8228:8318" ph="SELECT t2.id... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="8415:8459" ph="ALTER TABLE chess_data2... " />
+            <marker date="1471642838460" expanded="true" signature="8475:8586" ph="SELECT * int... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="8602:8655" ph="ALTER TABLE chess_data2... " />
+            <marker date="1471642838460" expanded="true" signature="8671:8943" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="8960:8994" ph="UPDATE chess... " />
+            <marker date="1471642838460" expanded="true" signature="9011:9118" ph="CREATE TABLE... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="9224:9330" ph="Select .*, c... " />
+            <marker date="1471642838460" expanded="true" signature="9224:9507" ph="Select .*, (... " />
           </folding>
         </state>
       </provider>
@@ -944,7 +784,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -959,9 +798,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -971,42 +808,55 @@
           <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1471535575059" expanded="true" signature="603:677" ph="SELECT EXIST... " />
-            <marker date="1471535575059" expanded="true" signature="617:674" ph="SELECT * FRO... tables" />
-            <marker date="1471535575059" expanded="true" signature="782:915" ph="INSERT INTO chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="1008:1061" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="1148:1333" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="3005:3089" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3103:3155" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3169:3436" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="3450:3502" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3516:3784" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="3798:3849" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3863:4077" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4091:4142" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4156:4370" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4384:4436" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4450:4632" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4646:4698" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4712:4895" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4909:4963" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4977:5213" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="5227:5281" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="5295:5531" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="5545:5599" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="5613:5876" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="5890:5942" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="5956:6165" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="6179:6233" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="6247:6510" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="6524:6576" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="6590:6799" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="6813:6870" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="6884:7248" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="7262:7348" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="7362:7419" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="7433:7797" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="7811:7897" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="615:689" ph="SELECT EXIST... " />
+            <marker date="1471642838460" expanded="true" signature="629:686" ph="SELECT * FRO... tables" />
+            <marker date="1471642838460" expanded="true" signature="794:927" ph="INSERT INTO chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="1020:1073" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="1160:1345" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="3017:3101" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="3115:3167" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="3462:3514" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="3528:3796" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="3810:3861" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="3875:4089" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="4103:4154" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="4168:4382" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="4396:4448" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="4462:4644" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="4658:4710" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="4724:4907" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="4921:4975" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="4989:5225" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="5239:5293" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="5307:5543" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="5557:5611" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="5625:5888" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="5902:5954" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="5968:6177" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="6191:6245" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="6259:6522" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="6536:6588" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="6602:6811" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="6825:6882" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="6896:7260" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="7274:7360" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="7374:7431" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="7445:7809" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="7823:7909" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="7959:8147" ph="select coale... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="7959:8150" ph="select (sele... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="7967:8119" ph="select coale... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="8166:8319" ph="SELECT sum(r... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="8172:8319" ph="select sum(r... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="8228:8318" ph="SELECT t2.id... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="8415:8459" ph="ALTER TABLE chess_data2... " />
+            <marker date="1471642838460" expanded="true" signature="8475:8586" ph="SELECT * int... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="8602:8655" ph="ALTER TABLE chess_data2... " />
+            <marker date="1471642838460" expanded="true" signature="8671:8943" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="8960:8994" ph="UPDATE chess... " />
+            <marker date="1471642838460" expanded="true" signature="9011:9118" ph="CREATE TABLE... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="9224:9330" ph="Select .*, c... " />
+            <marker date="1471642838460" expanded="true" signature="9224:9507" ph="Select .*, (... " />
           </folding>
         </state>
       </provider>
@@ -1015,9 +865,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="774">
           <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1027,42 +875,55 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1471535575059" expanded="true" signature="603:677" ph="SELECT EXIST... " />
-            <marker date="1471535575059" expanded="true" signature="617:674" ph="SELECT * FRO... tables" />
-            <marker date="1471535575059" expanded="true" signature="782:915" ph="INSERT INTO chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="1008:1061" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="1148:1333" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="3005:3089" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3103:3155" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3169:3436" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="3450:3502" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3516:3784" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="3798:3849" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3863:4077" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4091:4142" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4156:4370" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4384:4436" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4450:4632" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4646:4698" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4712:4895" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4909:4963" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4977:5213" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="5227:5281" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="5295:5531" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="5545:5599" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="5613:5876" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="5890:5942" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="5956:6165" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="6179:6233" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="6247:6510" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="6524:6576" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="6590:6799" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="6813:6870" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="6884:7248" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="7262:7348" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="7362:7419" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="7433:7797" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="7811:7897" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="615:689" ph="SELECT EXIST... " />
+            <marker date="1471642838460" expanded="true" signature="629:686" ph="SELECT * FRO... tables" />
+            <marker date="1471642838460" expanded="true" signature="794:927" ph="INSERT INTO chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="1020:1073" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="1160:1345" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="3017:3101" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="3115:3167" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="3462:3514" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="3528:3796" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="3810:3861" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="3875:4089" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="4103:4154" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="4168:4382" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="4396:4448" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="4462:4644" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="4658:4710" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="4724:4907" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="4921:4975" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="4989:5225" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="5239:5293" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="5307:5543" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="5557:5611" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="5625:5888" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="5902:5954" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="5968:6177" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="6191:6245" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="6259:6522" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="6536:6588" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="6602:6811" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="6825:6882" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="6896:7260" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="7274:7360" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="7374:7431" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="7445:7809" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="7823:7909" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="7959:8147" ph="select coale... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="7959:8150" ph="select (sele... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="7967:8119" ph="select coale... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="8166:8319" ph="SELECT sum(r... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="8172:8319" ph="select sum(r... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="8228:8318" ph="SELECT t2.id... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="8415:8459" ph="ALTER TABLE chess_data2... " />
+            <marker date="1471642838460" expanded="true" signature="8475:8586" ph="SELECT * int... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="8602:8655" ph="ALTER TABLE chess_data2... " />
+            <marker date="1471642838460" expanded="true" signature="8671:8943" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="8960:8994" ph="UPDATE chess... " />
+            <marker date="1471642838460" expanded="true" signature="9011:9118" ph="CREATE TABLE... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="9224:9330" ph="Select .*, c... " />
+            <marker date="1471642838460" expanded="true" signature="9224:9507" ph="Select .*, (... " />
           </folding>
         </state>
       </provider>
@@ -1083,7 +944,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1098,9 +958,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1110,42 +968,55 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1471535575059" expanded="true" signature="603:677" ph="SELECT EXIST... " />
-            <marker date="1471535575059" expanded="true" signature="617:674" ph="SELECT * FRO... tables" />
-            <marker date="1471535575059" expanded="true" signature="782:915" ph="INSERT INTO chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="1008:1061" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="1148:1333" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="3005:3089" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3103:3155" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3169:3436" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="3450:3502" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3516:3784" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="3798:3849" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3863:4077" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4091:4142" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4156:4370" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4384:4436" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4450:4632" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4646:4698" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4712:4895" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4909:4963" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4977:5213" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="5227:5281" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="5295:5531" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="5545:5599" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="5613:5876" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="5890:5942" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="5956:6165" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="6179:6233" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="6247:6510" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="6524:6576" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="6590:6799" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="6813:6870" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="6884:7248" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="7262:7348" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="7362:7419" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="7433:7797" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="7811:7897" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="615:689" ph="SELECT EXIST... " />
+            <marker date="1471642838460" expanded="true" signature="629:686" ph="SELECT * FRO... tables" />
+            <marker date="1471642838460" expanded="true" signature="794:927" ph="INSERT INTO chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="1020:1073" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="1160:1345" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="3017:3101" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="3115:3167" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="3462:3514" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="3528:3796" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="3810:3861" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="3875:4089" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="4103:4154" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="4168:4382" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="4396:4448" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="4462:4644" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="4658:4710" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="4724:4907" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="4921:4975" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="4989:5225" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="5239:5293" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="5307:5543" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="5557:5611" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="5625:5888" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="5902:5954" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="5968:6177" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="6191:6245" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="6259:6522" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="6536:6588" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="6602:6811" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="6825:6882" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="6896:7260" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="7274:7360" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="7374:7431" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="7445:7809" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="7823:7909" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="7959:8147" ph="select coale... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="7959:8150" ph="select (sele... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="7967:8119" ph="select coale... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="8166:8319" ph="SELECT sum(r... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="8172:8319" ph="select sum(r... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="8228:8318" ph="SELECT t2.id... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="8415:8459" ph="ALTER TABLE chess_data2... " />
+            <marker date="1471642838460" expanded="true" signature="8475:8586" ph="SELECT * int... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="8602:8655" ph="ALTER TABLE chess_data2... " />
+            <marker date="1471642838460" expanded="true" signature="8671:8943" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="8960:8994" ph="UPDATE chess... " />
+            <marker date="1471642838460" expanded="true" signature="9011:9118" ph="CREATE TABLE... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="9224:9330" ph="Select .*, c... " />
+            <marker date="1471642838460" expanded="true" signature="9224:9507" ph="Select .*, (... " />
           </folding>
         </state>
       </provider>
@@ -1166,10 +1037,90 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="59" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/1378dfe6-ddec-45db-86e8-140a57e908d7/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="25" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db_ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1471642838460" expanded="true" signature="615:689" ph="SELECT EXIST... " />
+            <marker date="1471642838460" expanded="true" signature="629:686" ph="SELECT * FRO... tables" />
+            <marker date="1471642838460" expanded="true" signature="794:927" ph="INSERT INTO chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="1020:1073" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="1160:1345" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="3017:3101" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="3115:3167" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="3462:3514" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="3528:3796" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="3810:3861" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="3875:4089" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="4103:4154" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="4168:4382" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="4396:4448" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="4462:4644" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="4658:4710" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="4724:4907" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="4921:4975" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="4989:5225" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="5239:5293" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="5307:5543" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="5557:5611" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="5625:5888" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="5902:5954" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="5968:6177" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="6191:6245" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="6259:6522" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="6536:6588" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="6602:6811" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="6825:6882" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="6896:7260" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="7274:7360" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="7374:7431" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="7445:7809" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="7823:7909" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="7959:8147" ph="select coale... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="7959:8150" ph="select (sele... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="7967:8119" ph="select coale... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="8166:8319" ph="SELECT sum(r... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="8172:8319" ph="select sum(r... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="8228:8318" ph="SELECT t2.id... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="8415:8459" ph="ALTER TABLE chess_data2... " />
+            <marker date="1471642838460" expanded="true" signature="8475:8586" ph="SELECT * int... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="8602:8655" ph="ALTER TABLE chess_data2... " />
+            <marker date="1471642838460" expanded="true" signature="8671:8943" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="8960:8994" ph="UPDATE chess... " />
+            <marker date="1471642838460" expanded="true" signature="9011:9118" ph="CREATE TABLE... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="9224:9330" ph="Select .*, c... " />
+            <marker date="1471642838460" expanded="true" signature="9224:9507" ph="Select .*, (... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1181,9 +1132,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="10" column="59" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1200,112 +1149,55 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1471535575059" expanded="true" signature="603:677" ph="SELECT EXIST... " />
-            <marker date="1471535575059" expanded="true" signature="617:674" ph="SELECT * FRO... tables" />
-            <marker date="1471535575059" expanded="true" signature="782:915" ph="INSERT INTO chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="1008:1061" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="1148:1333" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="3005:3089" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3103:3155" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3169:3436" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="3450:3502" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3516:3784" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="3798:3849" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3863:4077" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4091:4142" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4156:4370" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4384:4436" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4450:4632" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4646:4698" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4712:4895" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4909:4963" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4977:5213" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="5227:5281" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="5295:5531" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="5545:5599" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="5613:5876" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="5890:5942" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="5956:6165" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="6179:6233" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="6247:6510" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="6524:6576" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="6590:6799" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="6813:6870" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="6884:7248" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="7262:7348" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="7362:7419" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="7433:7797" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="7811:7897" ph="update chess... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="59" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/1378dfe6-ddec-45db-86e8-140a57e908d7/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="25" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db_ops.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <marker date="1471535575059" expanded="true" signature="603:677" ph="SELECT EXIST... " />
-            <marker date="1471535575059" expanded="true" signature="617:674" ph="SELECT * FRO... tables" />
-            <marker date="1471535575059" expanded="true" signature="782:915" ph="INSERT INTO chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="1008:1061" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="1148:1333" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="3005:3089" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3103:3155" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3169:3436" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="3450:3502" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3516:3784" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="3798:3849" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3863:4077" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4091:4142" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4156:4370" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4384:4436" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4450:4632" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4646:4698" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4712:4895" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4909:4963" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4977:5213" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="5227:5281" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="5295:5531" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="5545:5599" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="5613:5876" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="5890:5942" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="5956:6165" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="6179:6233" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="6247:6510" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="6524:6576" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="6590:6799" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="6813:6870" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="6884:7248" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="7262:7348" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="7362:7419" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="7433:7797" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="7811:7897" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="615:689" ph="SELECT EXIST... " />
+            <marker date="1471642838460" expanded="true" signature="629:686" ph="SELECT * FRO... tables" />
+            <marker date="1471642838460" expanded="true" signature="794:927" ph="INSERT INTO chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="1020:1073" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="1160:1345" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="3017:3101" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="3115:3167" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="3462:3514" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="3528:3796" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="3810:3861" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="3875:4089" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="4103:4154" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="4168:4382" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="4396:4448" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="4462:4644" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="4658:4710" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="4724:4907" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="4921:4975" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="4989:5225" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="5239:5293" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="5307:5543" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="5557:5611" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="5625:5888" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="5902:5954" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="5968:6177" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="6191:6245" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="6259:6522" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="6536:6588" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="6602:6811" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="6825:6882" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="6896:7260" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="7274:7360" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="7374:7431" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="7445:7809" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="7823:7909" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="7959:8147" ph="select coale... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="7959:8150" ph="select (sele... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="7967:8119" ph="select coale... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="8166:8319" ph="SELECT sum(r... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="8172:8319" ph="select sum(r... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="8228:8318" ph="SELECT t2.id... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="8415:8459" ph="ALTER TABLE chess_data2... " />
+            <marker date="1471642838460" expanded="true" signature="8475:8586" ph="SELECT * int... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="8602:8655" ph="ALTER TABLE chess_data2... " />
+            <marker date="1471642838460" expanded="true" signature="8671:8943" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="8960:8994" ph="UPDATE chess... " />
+            <marker date="1471642838460" expanded="true" signature="9011:9118" ph="CREATE TABLE... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="9224:9330" ph="Select .*, c... " />
+            <marker date="1471642838460" expanded="true" signature="9224:9507" ph="Select .*, (... " />
           </folding>
         </state>
       </provider>
@@ -1321,9 +1213,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1338,9 +1228,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1350,42 +1238,55 @@
           <caret line="59" column="5" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1471535575059" expanded="true" signature="603:677" ph="SELECT EXIST... " />
-            <marker date="1471535575059" expanded="true" signature="617:674" ph="SELECT * FRO... tables" />
-            <marker date="1471535575059" expanded="true" signature="782:915" ph="INSERT INTO chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="1008:1061" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="1148:1333" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="3005:3089" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3103:3155" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3169:3436" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="3450:3502" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3516:3784" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="3798:3849" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3863:4077" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4091:4142" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4156:4370" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4384:4436" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4450:4632" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4646:4698" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4712:4895" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4909:4963" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4977:5213" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="5227:5281" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="5295:5531" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="5545:5599" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="5613:5876" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="5890:5942" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="5956:6165" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="6179:6233" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="6247:6510" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="6524:6576" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="6590:6799" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="6813:6870" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="6884:7248" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="7262:7348" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="7362:7419" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="7433:7797" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="7811:7897" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="615:689" ph="SELECT EXIST... " />
+            <marker date="1471642838460" expanded="true" signature="629:686" ph="SELECT * FRO... tables" />
+            <marker date="1471642838460" expanded="true" signature="794:927" ph="INSERT INTO chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="1020:1073" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="1160:1345" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="3017:3101" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="3115:3167" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="3462:3514" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="3528:3796" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="3810:3861" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="3875:4089" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="4103:4154" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="4168:4382" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="4396:4448" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="4462:4644" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="4658:4710" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="4724:4907" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="4921:4975" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="4989:5225" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="5239:5293" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="5307:5543" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="5557:5611" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="5625:5888" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="5902:5954" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="5968:6177" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="6191:6245" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="6259:6522" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="6536:6588" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="6602:6811" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="6825:6882" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="6896:7260" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="7274:7360" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="7374:7431" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="7445:7809" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="7823:7909" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="7959:8147" ph="select coale... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="7959:8150" ph="select (sele... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="7967:8119" ph="select coale... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="8166:8319" ph="SELECT sum(r... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="8172:8319" ph="select sum(r... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="8228:8318" ph="SELECT t2.id... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="8415:8459" ph="ALTER TABLE chess_data2... " />
+            <marker date="1471642838460" expanded="true" signature="8475:8586" ph="SELECT * int... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="8602:8655" ph="ALTER TABLE chess_data2... " />
+            <marker date="1471642838460" expanded="true" signature="8671:8943" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="8960:8994" ph="UPDATE chess... " />
+            <marker date="1471642838460" expanded="true" signature="9011:9118" ph="CREATE TABLE... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="9224:9330" ph="Select .*, c... " />
+            <marker date="1471642838460" expanded="true" signature="9224:9507" ph="Select .*, (... " />
           </folding>
         </state>
       </provider>
@@ -1453,62 +1354,311 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/charts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f11369b9/1378dfe6-ddec-45db-86e8-140a57e908d7/postgres.public.temp">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+          <column-attributes>
+            <column name="ctid" enabled="false" />
+          </column-attributes>
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f11369b9/1378dfe6-ddec-45db-86e8-140a57e908d7/postgres.public.temp">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f11369b9/1378dfe6-ddec-45db-86e8-140a57e908d7/postgres.public.temp">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f11369b9/1378dfe6-ddec-45db-86e8-140a57e908d7/postgres.public.temp">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+          <column-attributes>
+            <column name="ctid" enabled="false" />
+          </column-attributes>
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f11369b9/1378dfe6-ddec-45db-86e8-140a57e908d7/postgres.public.temp">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+          <column-attributes>
+            <column name="ctid" enabled="false" />
+          </column-attributes>
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f11369b9/1378dfe6-ddec-45db-86e8-140a57e908d7/postgres.public.temp">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+          <column-attributes>
+            <column name="ctid" enabled="false" />
+          </column-attributes>
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f11369b9/1378dfe6-ddec-45db-86e8-140a57e908d7/postgres.public.temp">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+          <column-attributes>
+            <column name="ctid" enabled="false" />
+          </column-attributes>
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f11369b9/1378dfe6-ddec-45db-86e8-140a57e908d7/postgres.public.temp">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+          <column-attributes>
+            <column name="ctid" enabled="false" />
+          </column-attributes>
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f11369b9/1378dfe6-ddec-45db-86e8-140a57e908d7/postgres.public.temp">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+          <column-attributes>
+            <column name="ctid" enabled="false" />
+          </column-attributes>
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f11369b9/1378dfe6-ddec-45db-86e8-140a57e908d7/postgres.public.temp">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+          <column-attributes>
+            <column name="ctid" enabled="false" />
+          </column-attributes>
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f11369b9/1378dfe6-ddec-45db-86e8-140a57e908d7/postgres.public.temp">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+          <column-attributes>
+            <column name="ctid" enabled="false" />
+          </column-attributes>
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f11369b9/1378dfe6-ddec-45db-86e8-140a57e908d7/postgres.public.temp">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+          <column-attributes>
+            <column name="ctid" enabled="false" />
+          </column-attributes>
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f11369b9/1378dfe6-ddec-45db-86e8-140a57e908d7/postgres.public.temp">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+          <column-attributes>
+            <column name="ctid" enabled="false" />
+          </column-attributes>
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f11369b9/1378dfe6-ddec-45db-86e8-140a57e908d7/postgres.public.temp">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+          <column-attributes>
+            <column name="ctid" enabled="false" />
+          </column-attributes>
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/f11369b9/1378dfe6-ddec-45db-86e8-140a57e908d7/postgres.public.chess_data2">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db_ops.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="802">
-          <caret line="151" column="44" selection-start-line="151" selection-start-column="44" selection-end-line="151" selection-end-column="44" />
+        <state relative-caret-position="387">
+          <caret line="143" column="81" selection-start-line="143" selection-start-column="81" selection-end-line="143" selection-end-column="81" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1471535575059" expanded="true" signature="603:677" ph="SELECT EXIST... " />
-            <marker date="1471535575059" expanded="true" signature="617:674" ph="SELECT * FRO... tables" />
-            <marker date="1471535575059" expanded="true" signature="782:915" ph="INSERT INTO chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="1008:1061" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="1148:1333" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="3005:3089" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3103:3155" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3169:3436" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="3450:3502" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3516:3784" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="3798:3849" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="3863:4077" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4091:4142" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4156:4370" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4384:4436" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4450:4632" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4646:4698" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4712:4895" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="4909:4963" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="4977:5213" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="5227:5281" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="5295:5531" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="5545:5599" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="5613:5876" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="5890:5942" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="5956:6165" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="6179:6233" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="6247:6510" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="6524:6576" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="6590:6799" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="6813:6870" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="6884:7248" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="7262:7348" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="7362:7419" ph="ALTER TABLE chess_data... " />
-            <marker date="1471535575059" expanded="true" signature="7433:7797" ph="update chess... " />
-            <marker date="1471535575059" expanded="true" signature="7811:7897" ph="update chess... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
+            <marker date="1471642838460" expanded="true" signature="615:689" ph="SELECT EXIST... " />
+            <marker date="1471642838460" expanded="true" signature="629:686" ph="SELECT * FRO... tables" />
+            <marker date="1471642838460" expanded="true" signature="794:927" ph="INSERT INTO chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="1020:1073" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="1160:1345" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="3017:3101" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="3115:3167" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="3462:3514" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="3528:3796" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="3810:3861" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="3875:4089" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="4103:4154" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="4168:4382" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="4396:4448" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="4462:4644" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="4658:4710" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="4724:4907" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="4921:4975" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="4989:5225" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="5239:5293" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="5307:5543" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="5557:5611" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="5625:5888" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="5902:5954" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="5968:6177" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="6191:6245" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="6259:6522" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="6536:6588" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="6602:6811" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="6825:6882" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="6896:7260" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="7274:7360" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="7374:7431" ph="ALTER TABLE chess_data... " />
+            <marker date="1471642838460" expanded="true" signature="7445:7809" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="7823:7909" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="7959:8147" ph="select coale... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="7959:8150" ph="select (sele... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="7967:8119" ph="select coale... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="8166:8319" ph="SELECT sum(r... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="8172:8319" ph="select sum(r... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="8228:8318" ph="SELECT t2.id... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="8415:8459" ph="ALTER TABLE chess_data2... " />
+            <marker date="1471642838460" expanded="true" signature="8475:8586" ph="SELECT * int... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="8602:8655" ph="ALTER TABLE chess_data2... " />
+            <marker date="1471642838460" expanded="true" signature="8671:8943" ph="update chess... " />
+            <marker date="1471642838460" expanded="true" signature="8960:8994" ph="UPDATE chess... " />
+            <marker date="1471642838460" expanded="true" signature="9011:9118" ph="CREATE TABLE... chess_data2" />
+            <marker date="1471642838460" expanded="true" signature="9224:9330" ph="Select .*, c... " />
+            <marker date="1471642838460" expanded="true" signature="9224:9507" ph="Select .*, (... " />
           </folding>
         </state>
       </provider>

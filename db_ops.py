@@ -6,6 +6,7 @@ import math
 import pandas
 import pickle
 import sqlalchemy
+import time
 
 DEBUG = False
 TABLE_NAME = "postgres.public.chess_data"
@@ -137,6 +138,26 @@ if __name__ == '__main__':
     #     " (t1.nameB = t3.nameW or t1.nameB = t3.nameB)) AND (t1.nameB = t2.nameW OR t1.nameB = t2.nameB) Limit 1)",
     #     "update chess_data t1 set last_game_result_b = (SELECT coalesce(last_game_result_b, 0))",
     # ]
+    start = time.time()
+
+    query1 = "select (select coalesce(SUM(result),0) from chess_data2 t2 " \
+             "where (t1.nameW = t2.nameW) and t1.tournament = t2.tournament and t1.date > t2.date) INTO temp from chess_data2 t1"
+    query2 = "SELECT sum(result) into temp FROM chess_data2 t1 WHERE id IN (SELECT t2.id FROM chess_data2 t2 WHERE t1.tournament = t2.tournament AND t1.namew=t2.namew)"
+    query3 = "CREATE INDEX game_index ON chess_data2 (namew, tournament, date)"
+    query4 = "ALTER TABLE chess_data2 ADD PRIMARY KEY (id)"
+    query5 = "SELECT * into temp FROM chess_data2 WHERE result IS NULL OR tournament IS NULL OR date IS NULL OR namew IS NULL"
+    query6 = "ALTER TABLE chess_data2 ADD COLUMN result_in_t_w real"
+    query7 = "update chess_data2 t1 set result_in_t_w = (select coalesce(SUM(CASE WHEN t1.nameW = t2.nameW THEN result ELSE 1-result END),0) from chess_data2 t2 " \
+             "where (t1.nameW = t2.nameW or t1.nameW = t2.nameB) and t1.tournament = t2.tournament and t1.date > t2.date)"
+    # query = "UPDATE chess_data SET id = DEFAULT"
+    # query = "CREATE TABLE chess_data2 AS SELECT chess_data.*, row_number() OVER(ORDER BY date ASC) as id FROM chess_data"
+    c.execute(query1)
+    DB_CONN.commit()
+    end = time.time()
+    print(end - start)
+
+    # query = "Select .*, coalesce(SUM(CASE WHEN t1.nameW = t2.nameW THEN result ELSE 1-result END),0) from chess_data t2 " \
+    #         "where (t1.nameW = t2.nameW or t1.nameW = t2.nameB) and t1.tournament = t2.tournament and t1.date > t2.date) as result_in_t_w from chess_data into chess_data2"
     # a = 0
     # for query in queries:
     #     c.execute(query)
@@ -145,10 +166,10 @@ if __name__ == '__main__':
     #     DB_CONN.commit()
     # print('Done feature engineering!')
     # engine = create_engine('postgresql+psycopg2://scott:tiger@localhost/mydatabase')
-    engine = sqlalchemy.create_engine("postgresql+psycopg2://postgres:postgres@localhost:5432/postgres")
-    X = pandas.read_sql_table('chess_data', engine)
-    DB_CONN.close()
-    with open('df_X', 'wb') as f:
-        pickle.dump(X, f, pickle.HIGHEST_PROTOCOL)
-    print("Data dumped!")
-    sys.exit(0)
+    # engine = sqlalchemy.create_engine("postgresql+psycopg2://postgres:postgres@localhost:5432/postgres")
+    # X = pandas.read_sql_table('chess_data', engine)
+    # DB_CONN.close()
+    # with open('df_X', 'wb') as f:
+    #     pickle.dump(X, f, pickle.HIGHEST_PROTOCOL)
+    # print("Data dumped!")
+    # sys.exit(0)
