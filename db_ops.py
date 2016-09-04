@@ -19,30 +19,6 @@ def create_db_table(cursor, table_name):
              (date TEXT, nameW TEXT, nameB TEXT, whiteRank INT, blackRank INT, tournament TEXT, t_round INT, result REAL);''')
 
 
-def check_if_table_exists(cursor, table_name):
-    cursor.execute("SELECT EXISTS(SELECT * FROM information_schema.tables where table_name=%s)", ('table_name',))
-    return cursor.fetchone()[0]
-
-
-def insert_into_db(cursor, data_row):
-    query = "INSERT INTO chess_data(date, namew, nameb, whiterank, blackrank, tournament, t_round, result) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)"
-    cursor.execute(query, data_row)
-    return True
-
-
-def add_column(cursor):
-    query = "ALTER TABLE chess_data ADD COLUMN career_games_b REAL "
-    cursor.execute(query)
-    return True
-
-
-def fill_col_data(cursor):
-    query = "update chess_data t1 set career_games_b = (select coalesce(count(nameW), 0) from chess_data t2 " \
-            "where (t1.nameB = t2.nameW or t1.nameB = t2.nameB) and t1.date > t2.date)"
-    cursor.execute(query)
-    return True
-
-
 def load_data_into_db(cursor, table_name):
     print('Data loading initiated\n')
     with open('./base.csv', newline='', encoding='ISO-8859-1') as csvfile:
@@ -85,91 +61,132 @@ def load_data_into_db(cursor, table_name):
 
 if __name__ == '__main__':
     c = DB_CONN.cursor()
-    # create_db_table(c, TABLE_NAME)
-    # load_data_into_db(c, TABLE_NAME)
-    # add_column(c)
-    # fill_col_data(c)
-    # queries = [
-    #     "ALTER TABLE chess_data ALTER COLUMN date TYPE DATE using to_date(date, 'YYYY-MM-DD')",
-    #     "ALTER TABLE chess_data ADD COLUMN result_in_t_w real",
-    #     "update chess_data t1 set result_in_t_w = (select coalesce(SUM(CASE WHEN t1.nameW = t2.nameW THEN result ELSE 1-result END),0) from chess_data t2 " \
-    #     "where (t1.nameW = t2.nameW or t1.nameW = t2.nameB) and t1.tournament = t2.tournament and t1.date > t2.date)",
-    #     "ALTER TABLE chess_data ADD COLUMN result_in_t_b real",
-    #     "update chess_data t1 set result_in_t_b = (select coalesce(SUM(CASE WHEN t1.nameB = t2.nameW THEN result ELSE 1-result END), 0) from chess_data t2 " \
-    #     "where (t1.nameB = t2.nameW or t1.nameB = t2.nameB) and t1.tournament = t2.tournament and t1.date > t2.date)",
-    #     "ALTER TABLE chess_data ADD COLUMN games_in_t_w real",
-    #     "update chess_data t1 set games_in_t_w = (select coalesce(count(nameW),0) from chess_data t2 " \
-    #     "where (t1.nameW = t2.nameW or t1.nameW = t2.nameB) and t1.tournament = t2.tournament and t1.date > t2.date)",
-    #     "ALTER TABLE chess_data ADD COLUMN games_in_t_b real",
-    #     "update chess_data t1 set games_in_t_b = (select coalesce(count(nameB),0) from chess_data t2 " \
-    #     "where (t1.nameB = t2.nameW or t1.nameB = t2.nameB) and t1.tournament = t2.tournament and t1.date > t2.date)",
-    #     "ALTER TABLE chess_data ADD COLUMN career_games_w int",
-    #     "update chess_data t1 set career_games_w = (select coalesce(count(nameW),0) from chess_data t2 " \
-    #     "where (t1.nameW = t2.nameW or t1.nameW = t2.nameB) and t1.date > t2.date)",
-    #     "ALTER TABLE chess_data ADD COLUMN career_games_b int",
-    #     "update chess_data t1 set career_games_b = (select coalesce(count(nameW), 0) from chess_data t2 " \
-    #     "where (t1.nameB = t2.nameW or t1.nameB = t2.nameB) and t1.date > t2.date)",
-    #     "ALTER TABLE chess_data ADD COLUMN career_w_record real",
-    #     "update chess_data t1 set career_w_record = (select coalesce(SUM(CASE WHEN t1.nameW = t2.nameW THEN result ELSE 1-result END), 0) from chess_data t2 " \
-    #     "where (t1.nameW = t2.nameW or t1.nameW = t2.nameB) and t1.date > t2.date)",
-    #     "ALTER TABLE chess_data ADD COLUMN career_b_record real",
-    #     "update chess_data t1 set career_b_record = (select coalesce(SUM(CASE WHEN t1.nameB = t2.nameW THEN result ELSE 1-result END), 0) from chess_data t2 " \
-    #     "where (t1.nameB = t2.nameW or t1.nameB = t2.nameB) and t1.date > t2.date)",
-    #     "ALTER TABLE chess_data ADD COLUMN last_q_record_w real",
-    #     "update chess_data t1 set last_q_record_w = (select coalesce(SUM(CASE WHEN t1.nameW = t2.nameW THEN result ELSE 1-result END), 0) from chess_data t2 " \
-    #     "where (t1.nameW = t2.nameW or t1.nameW = t2.nameB) and t1.date - t2.date<90 and t1.date - t2.date>0)",
-    #     "ALTER TABLE chess_data ADD COLUMN last_q_games_w int",
-    #     "update chess_data t1 set last_q_games_w = (select coalesce(count(nameW),0) from chess_data t2 " \
-    #     "where (t1.nameW = t2.nameW or t1.nameW = t2.nameB) and t1.date - t2.date<90 and t1.date - t2.date>0)",
-    #     "ALTER TABLE chess_data ADD COLUMN last_q_record_b real",
-    #     "update chess_data t1 set last_q_record_b = (select coalesce(SUM(CASE WHEN t1.nameB = t2.nameW THEN result ELSE 1-result END), 0) from chess_data t2 " \
-    #     "where (t1.nameB = t2.nameW or t1.nameB = t2.nameB) and t1.date - t2.date<90 and t1.date - t2.date>0)",
-    #     "ALTER TABLE chess_data ADD COLUMN last_q_games_b int",
-    #     "update chess_data t1 set last_q_games_b = (select coalesce(count(nameW),0) from chess_data t2 " \
-    #     "where (t1.nameB = t2.nameW or t1.nameB = t2.nameB) and t1.date - t2.date<90 and t1.date - t2.date>0)",
-    #     "ALTER TABLE chess_data ADD COLUMN last_game_result_w real",
-    #     "update chess_data t1 set last_game_result_w = (select coalesce(CASE WHEN t1.nameW = t2.nameW THEN t2.result ELSE t2.result END,0) from chess_data t2 " \
-    #     " WHERE t2.date = (select max(date) from chess_data t3 where t3.date < t1.date AND" \
-    #     " (t1.nameW = t3.nameW or t1.nameW = t3.nameB)) AND (t1.nameW = t2.nameW OR t1.nameW = t2.nameB) Limit 1)",
-    #     "update chess_data t1 set last_game_result_w = (SELECT coalesce(last_game_result_w, 0))",
-    #     "ALTER TABLE chess_data ADD COLUMN last_game_result_b real",
-    #     "update chess_data t1 set last_game_result_b = (select coalesce(CASE WHEN t1.nameB = t2.nameW THEN t2.result ELSE t2.result END,0) from chess_data t2 " \
-    #     " WHERE t2.date = (select max(date) from chess_data t3 where t3.date < t1.date AND" \
-    #     " (t1.nameB = t3.nameW or t1.nameB = t3.nameB)) AND (t1.nameB = t2.nameW OR t1.nameB = t2.nameB) Limit 1)",
-    #     "update chess_data t1 set last_game_result_b = (SELECT coalesce(last_game_result_b, 0))",
-    # ]
-    start = time.time()
+    create_db_table(c, TABLE_NAME)
+    print("Table created!")
+    load_data_into_db(c, TABLE_NAME)
+    queries = [
+        "ALTER TABLE chess_data ALTER COLUMN date TYPE DATE using to_date(date, 'YYYY-MM-DD')",
+        "SELECT x.* INTO players FROM (SELECT DISTINCT namew FROM chess_data2 " \
+        "UNION SELECT DISTINCT nameb FROM chess_data2) x",
+        "SELECT DISTINCT tournament INTO tournaments FROM chess_data2"
+        "ALTER TABLE players ADD COLUMN id SERIAL PRIMARY KEY;"
+        "ALTER TABLE tournaments ADD COLUMN id SERIAL PRIMARY KEY;"
+        "SELECT * INTO chess_data2 FROM chess_data",
+        "ALTER TABLE chess_data2 ADD COLUMN id SERIAL PRIMARY KEY",
+        "ALTER TABLE chess_data2 ADD COLUMN tournament_id INTEGER",
+        "ALTER TABLE chess_data2 ADD COLUMN namew_id INTEGER",
+        "ALTER TABLE chess_data2 ADD COLUMN nameb_id INTEGER",
+        "UPDATE chess_data2 cd2 SET tournament_id = (SELECT id FROM tournaments WHERE t_name = cd2.tournament)",
+        "UPDATE chess_data2 cd2 SET namew_id = (SELECT id FROM players WHERE name = cd2.namew)",
+        "UPDATE chess_data2 cd2 SET nameb_id = (SELECT id FROM players WHERE name = cd2.nameb)",
+        "ALTER TABLE chess_data2 DROP COLUMN namew",
+        "ALTER TABLE chess_data2 DROP COLUMN nameb",
+        "ALTER TABLE chess_data2 DROP COLUMN tournament"
+        "CREATE INDEX nameb__index ON public.chess_data2 (nameb_id, tournament_id, date)",
+        "CREATE INDEX namew__index ON public.chess_data2 (namew_id, tournament_id, date)",
 
-    query1 = "select (select coalesce(SUM(result),0) from chess_data2 t2 " \
-             "where (t1.nameW = t2.nameW) and t1.tournament = t2.tournament and t1.date > t2.date) INTO temp from chess_data2 t1"
-    query2 = "SELECT sum(result) into temp FROM chess_data2 t1 WHERE id IN (SELECT t2.id FROM chess_data2 t2 WHERE t1.tournament = t2.tournament AND t1.namew=t2.namew)"
-    query3 = "CREATE INDEX game_index ON chess_data2 (namew, tournament, date)"
-    query4 = "ALTER TABLE chess_data2 ADD PRIMARY KEY (id)"
-    query5 = "SELECT * into temp FROM chess_data2 WHERE result IS NULL OR tournament IS NULL OR date IS NULL OR namew IS NULL"
-    query6 = "ALTER TABLE chess_data2 ADD COLUMN result_in_t_w real"
-    query7 = "update chess_data2 t1 set result_in_t_w = (select coalesce(SUM(CASE WHEN t1.nameW = t2.nameW THEN result ELSE 1-result END),0) from chess_data2 t2 " \
-             "where (t1.nameW = t2.nameW or t1.nameW = t2.nameB) and t1.tournament = t2.tournament and t1.date > t2.date)"
-    # query = "UPDATE chess_data SET id = DEFAULT"
-    # query = "CREATE TABLE chess_data2 AS SELECT chess_data.*, row_number() OVER(ORDER BY date ASC) as id FROM chess_data"
-    c.execute(query1)
-    DB_CONN.commit()
-    end = time.time()
-    print(end - start)
+        "SELECT *,"
+            # Number of points that the white player has so far accrued throughout the tournament
+        "(SELECT coalesce(SUM(result),0) from chess_data2 t2 " \
+        "where (t1.namew_id = t2.namew_id) and t1.tournament_id = t2.tournament_id and t1.date > t2.date " \
+        "and t1.date < t2.date + 90 ) + (SELECT coalesce(SUM(1-result),0) from chess_data2 t2 " \
+        "where (t1.namew_id = t2.nameb_id) and t1.tournament_id = t2.tournament_id and t1.date > t2.date " \
+        "and t1.date < t2.date + 90 ) AS result_in_t_w, "
+            # Number of points that the black player has so far accrued throughout the tournament
+        "(SELECT coalesce(SUM(result),0) from chess_data2 t2 " \
+        "where (t1.nameb_id = t2.namew_id) and t1.tournament_id = t2.tournament_id and t1.date > t2.date " \
+        "and t1.date < t2.date + 90 ) + (SELECT coalesce(SUM(1-result),0) from chess_data2 t2 " \
+        "where (t1.nameb_id = t2.nameb_id) and t1.tournament_id = t2.tournament_id and t1.date > t2.date " \
+        "and t1.date < t2.date + 90 ) AS result_in_t_b, " \
+            # Number of games that the white player has so far played in the tournament
+        "(SELECT count(*) from chess_data2 t2 " \
+        "where (t1.namew_id = t2.namew_id) and t1.tournament_id = t2.tournament_id and t1.date > t2.date " \
+        "and t1.date < t2.date + 90) + (SELECT count(*) from chess_data2 t2 " \
+        "where (t1.namew_id = t2.nameb_id) and t1.tournament_id = t2.tournament_id and t1.date > t2.date " \
+        "and t1.date < t2.date + 90) AS games_t_w, " \
+            # Number of games that the black player has so far played in the tournament
+        "(SELECT count(*) from chess_data2 t2 " \
+        "where (t1.nameb_id = t2.namew_id) and t1.tournament_id = t2.tournament_id and t1.date > t2.date " \
+        "and t1.date < t2.date + 90) + (SELECT count(*) from chess_data2 t2 " \
+        "where (t1.nameb_id = t2.nameb_id) and t1.tournament_id = t2.tournament_id and t1.date > t2.date " \
+        "and t1.date < t2.date + 90) AS games_t_b, " \
+            # Number of games that the white player has so far played in the whole career
+        "(SELECT count(*) from chess_data2 t2 " \
+        "where (t1.namew_id = t2.namew_id) and t1.date > t2.date) " \
+        "+ (SELECT count(*) from chess_data2 t2 " \
+        "where (t1.namew_id = t2.nameb_id) and t1.date > t2.date) " \
+        "AS games_c_w, " \
+            # Number of games that the black player has so far played in the whole career
+        "(SELECT count(*) from chess_data2 t2 " \
+        "where (t1.nameb_id = t2.namew_id) and t1.date > t2.date) " \
+        "+ (SELECT count(*) from chess_data2 t2 " \
+        "where (t1.nameb_id = t2.nameb_id) and t1.date > t2.date) " \
+        "AS games_c_b, " \
+            # Number of games with white that the white player has played during last 6 months
+        "(SELECT count(*) from chess_data2 t2 " \
+        "where (t1.namew_id = t2.namew_id) and t1.date > t2.date and t1.date < t2.date + 180) " \
+        "AS games_6m_w, " \
+            # Number of games with black that the black player has played during last 6 months
+        "(SELECT count(*) from chess_data2 t2 " \
+        "where (t1.nameb_id = t2.nameb_id) AND t1.date > t2.date AND t1.date < t2.date + 180) " \
+        "AS games_6m_b, " \
+            # Number of points with white that the white player has played during last 6 months
+        "(SELECT coalesce(SUM(result),0) from chess_data2 t2 " \
+        "where (t1.namew_id = t2.namew_id) and t1.date > t2.date " \
+        "and t1.date < t2.date + 180 ) AS result_6m_w, " \
+            # Number of points with black that the black player has played during last 6 months
+        "(SELECT coalesce(SUM(1-result),0) from chess_data2 t2 " \
+        "where (t1.nameb_id = t2.nameb_id) and t1.date > t2.date " \
+        "and t1.date < t2.date + 180 ) AS result_6m_b " \
 
-    # query = "Select .*, coalesce(SUM(CASE WHEN t1.nameW = t2.nameW THEN result ELSE 1-result END),0) from chess_data t2 " \
-    #         "where (t1.nameW = t2.nameW or t1.nameW = t2.nameB) and t1.tournament = t2.tournament and t1.date > t2.date) as result_in_t_w from chess_data into chess_data2"
-    # a = 0
-    # for query in queries:
-    #     c.execute(query)
-    #     a += 1
-    #     print("Completed query number", a)
-    #     DB_CONN.commit()
-    # print('Done feature engineering!')
-    # engine = create_engine('postgresql+psycopg2://scott:tiger@localhost/mydatabase')
-    # engine = sqlalchemy.create_engine("postgresql+psycopg2://postgres:postgres@localhost:5432/postgres")
-    # X = pandas.read_sql_table('chess_data', engine)
-    # DB_CONN.close()
-    # with open('df_X', 'wb') as f:
-    #     pickle.dump(X, f, pickle.HIGHEST_PROTOCOL)
-    # print("Data dumped!")
-    # sys.exit(0)
+        # Close the query
+        "INTO aaaa from chess_data2 t1"
+    ]
+
+    a = 0
+    print("Starting the queries!")
+    for query in queries:
+        start = time.time()
+        c.execute(query)
+        a += 1
+        print("Completed query number", a)
+        DB_CONN.commit()
+        end = time.time()
+        print(end - start)
+        print('Done feature engineering!')
+    engine = sqlalchemy.create_engine("postgresql+psycopg2://postgres:postgres@localhost:5432/postgres")
+    X = pandas.read_sql_table('aaaa', engine)
+    DB_CONN.close()
+    with open('df_X', 'wb') as f:
+        pickle.dump(X, f, pickle.HIGHEST_PROTOCOL)
+    print("Data dumped!")
+    sys.exit(0)
+
+    # Number of years in database that white player has
+    # TODO get rid of "OR"
+    # "(SELECT t1.date - t2.date "
+    # "FROM chess_data2 t2 "
+    # "WHERE t2.date = (SELECT CASE WHEN "
+    #     "(SELECT min(date) FROM chess_data2 t3 "
+    #         "WHERE t3.date < t1.date AND t1.namew_id = t3.namew_id LIMIT 1) "
+    #     "> " \
+    #     "(SELECT min(date) FROM chess_data2 t3 "
+    #         "WHERE t3.date < t1.date AND t1.namew_id = t3.nameb_id LIMIT 1) "
+    # "THEN"
+    #     "(SELECT min(date) FROM chess_data2 t3 "
+    #         "WHERE t3.date < t1.date AND t1.namew_id = t3.namew_id LIMIT 1) "
+    # "ELSE "
+    #     "(SELECT min(date) FROM chess_data2 t3 "
+    #         "WHERE t3.date < t1.date AND t1.namew_id = t3.namew_id LIMIT 1) "
+    # "END) LIMIT 1) AS white_exp "
+    # Number of years in database that black player has
+    # TODO get rid of "OR"
+    # "CASE WHEN t1.games_t_b=0 THEN 0"
+    # "CASE WHEN t1.games_t_b=1 THEN ("
+    # "SELECT "
+    # "SELECT max() FROM "
+    # "(SELECT t1.date - t2.date FROM chess_data2 t2 "
+    # "WHERE t2.date = (SELECT max(date) FROM chess_data2 t3 WHERE t3.date < t1.date AND " \
+    # "(t1.nameb_id = t3.namew_id OR t1.nameb_id = t3.nameb_id)) Limit 1) AS black_exp "
+    # TODO Last game result for white
+    # TODO Last game result for black
